@@ -11,6 +11,7 @@ export default function App({ Component, pageProps }) {
     <div>
       <Head>
         <link rel="icon" type="image/png" href="/favicon.png" />
+        <title>Junshuai Zhang's portfolio</title>
       </Head>
       <Provider store={store}>
         <Layout>

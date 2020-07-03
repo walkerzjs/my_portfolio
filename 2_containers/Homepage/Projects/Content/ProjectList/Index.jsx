@@ -22,8 +22,8 @@ const ProjectList = (props) => {
   //   console.log(projectData);
   const projects = projectData.map((id) => {
     return (
-      <li>
-        <SharedCard key={id} id={id} />
+      <li key={id}>
+        <SharedCard id={id} />
       </li>
     );
   });

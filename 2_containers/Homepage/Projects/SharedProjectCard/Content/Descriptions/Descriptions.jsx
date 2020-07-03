@@ -5,13 +5,17 @@ import Title from "./Content/Title";
 import Description from "./Content/Description";
 import Links from "./Content/Links";
 
+const Descriptions_ = styled.div`
+  height: 70%;
+`;
+
 const Descriptions = (props) => {
   return (
-    <div>
+    <Descriptions_>
       <Title id={props.id} />
       <Description id={props.id} />
       <Links id={props.id} />
-    </div>
+    </Descriptions_>
   );
 };
 

@@ -9,6 +9,7 @@ const Image_ = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 50% 0%;
     border: none;
     display: block;
     border-radius: 5px;
@@ -21,9 +22,14 @@ const Image_ = styled.div`
 
 const Image = (props) => {
   const image = useSelector((state) => state.projectsReducer[props.id].image);
+  const address = useSelector(
+    (state) => state.projectsReducer[props.id].website
+  );
   return (
     <Image_>
-      <img src={image} alt="project screenshot" />
+      <a href={address} target="_blank">
+        <img src={image} alt="project screenshot" />
+      </a>
     </Image_>
   );
 };

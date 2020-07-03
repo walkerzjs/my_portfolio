@@ -3,22 +3,30 @@ const initialState = {
     image: "/myPortfolio.jpg",
     title: "My portfolio",
     desc: "This is my personal website to show my recent work and personality.",
-    githubLink: "",
+    githubLink: "https://github.com/walkerzjs/my_portfolio",
     website: "https://my-portfoliojsz.com/",
   },
   2: {
-    image: "image2",
-    title: "Learning Management System",
-    desc: "A system for course and student enrolment.",
-    githubLink: "aaa",
-    website: "bbb",
+    image: "/burgerBuilder.jpg",
+    title: "Burger Builder",
+    desc: [
+      "A project made following the course: ",
+      <a
+        href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/"
+        style={{ color: "var(--black)" }}
+      >
+        React-The Complete Guide
+      </a>,
+    ],
+    githubLink: "",
+    website: "https://react-my-burger-2ef30.firebaseapp.com/",
   },
   3: {
-    image: "image3",
-    title: "Burger Builder",
-    desc: "A project made following the course: React-The Complete Guide",
-    githubLink: "",
-    website: "",
+    image: "/lms.jpg",
+    title: "Learning Management System",
+    desc: "A system for course and student enrolment.",
+    githubLink: "https://github.com/walkerzjs/LMS_Frontend",
+    website: "https://lms-jz.azurewebsites.net/",
   },
 };
 
