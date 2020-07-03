@@ -4,7 +4,7 @@ import Hero from "./Hero/Hero";
 import AboutMe from "./AboutMe/AboutMe";
 import Projects from "./Projects/Projects";
 const HomePage_ = styled.div`
-  position: relative;
+  /* position: relative; */
 `;
 
 const HomePage = (props) => {

@@ -3,9 +3,8 @@ import styled from "styled-components";
 import DetailedIntro from "./Content/DetailedIntro";
 import SideDecor from "./Content/SideDecor";
 const AboutMe_ = styled.section`
-  position: absolute;
-  top: 27vw;
-  left: 0px;
+  position: relative;
+  margin-top: -9vw;
   width: 100%;
   height: 35.3vw;
   background: #f9f9f9 0% 0% no-repeat padding-box;

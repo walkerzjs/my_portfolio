@@ -1,7 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
+const Title_ = styled.h1`
+  font-size: 2.7rem;
+`;
+
 const Title = (props) => {
-  return <h1>Recent Projects</h1>;
+  return <Title_>Recent Projects</Title_>;
 };
 export default Title;
