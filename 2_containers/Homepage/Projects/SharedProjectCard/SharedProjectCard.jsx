@@ -10,6 +10,7 @@ const SharedProjectCard_ = styled.div`
   background: var(--white) 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 8px #00000029;
   border-radius: 3rem;
+  padding: 4rem;
   opacity: 1;
 `;
 

@@ -1,6 +1,6 @@
 const initialState = {
   1: {
-    image: "image1",
+    image: "/myPortfolio.jpg",
     title: "My portfolio",
     desc: "This is my personal website to show my recent work and personality.",
     githubLink: "",
