@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Input from "./Shared/Input";
+import Input from "./Shared/Input/Index";
 import SubmitButton from "./Shared/SubmitButton";
 import SubmitError from "./SubmitError";
 import { useSelector, shallowEqual } from "react-redux";

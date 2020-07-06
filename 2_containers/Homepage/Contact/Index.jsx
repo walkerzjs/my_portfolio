@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ContactForm from "./ContactForm";
+import ContactForm from "./ContactForm/Index";
 import SideDecor from "./SideDecor";
 
 const Index_ = styled.section`

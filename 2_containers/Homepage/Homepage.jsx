@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Hero from "./Hero/Hero";
 import AboutMe from "./AboutMe/AboutMe";
 import Projects from "./Projects/Projects";
-import Contact from "./Contact";
+import Contact from "./Contact/Index";
 const HomePage_ = styled.div`
   /* position: relative; */
 `;
