@@ -16,7 +16,7 @@ const Hero_ = styled.section`
 
 const Hero = (props) => {
   return (
-    <Hero_ id="intro">
+    <Hero_ id="intro" aria-label="hero section">
       <Intro />
       <Portrait />
     </Hero_>

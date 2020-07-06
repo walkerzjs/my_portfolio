@@ -18,7 +18,7 @@ const Links = (props) => {
   return (
     <Links_>
       <a href={githubLink} target="_blank">
-        Git Repo
+        Repository
       </a>
     </Links_>
   );
