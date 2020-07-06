@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { useDispatch } from "react-redux";
-import { submitAction } from "../../../../../3_data/actions/contactFormActions";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  submit,
+  submitCheck,
+} from "../../../../../3_data/actions/contactFormActions";
 
 const Button_ = styled.button`
   background: var(--blue-3) 0% 0% no-repeat padding-box;
@@ -16,9 +19,21 @@ const Button_ = styled.button`
 `;
 
 const SubmitButton = (props) => {
+  const isValid = useSelector((state) => state.contactFormReducer.isValid);
+  // console.log("isValid: ", isValid);
   const dispatch = useDispatch();
 
-  return <Button_>Submit</Button_>;
+  const onSubmit = (e) => {
+    e.preventDefault();
+    // console.log("e: ", e);
+    if (isValid) {
+      dispatch(submit());
+    } else {
+      dispatch(submitCheck());
+    }
+  };
+
+  return <Button_ onClick={(e) => onSubmit(e)}>Submit</Button_>;
 };
 
 export default SubmitButton;

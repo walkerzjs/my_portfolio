@@ -1,8 +1,13 @@
 import * as actionTypes from "../actions/actionTypes";
 const initialState = {
   isValid: undefined,
+
+  submitting: false,
+  submitSuccess: false,
+  submitSuccessMessage: "",
   submitError: false,
   submitErrorMessage: "",
+
   formConfig: {
     1: {
       type: "name",
@@ -32,13 +37,57 @@ const initialState = {
   },
 };
 
+/**
+ *    type: actionTypes.VALIDATING,
+          key: key,
+          isValid: false,
+          validationErrorMessage: "Please enter your name",
+ */
+
 const contactFormReducer = (state = initialState, action) => {
+  let config;
   switch (action.type) {
     case actionTypes.UPDATE_VALUE:
-      const config = { ...state.formConfig[action.key] };
+      config = { ...state.formConfig[action.key] };
       config.value = action.value;
       state.formConfig[action.key] = { ...config };
-      return state;
+      return { ...state };
+    case actionTypes.VALIDATING:
+      //   console.log("validate reducer");
+      config = { ...state.formConfig[action.key] };
+      config.isValid = action.isValid;
+      config.validationErrorMessage = action.validationErrorMessage;
+      state.formConfig[action.key] = { ...config };
+
+      let invalidList = Object.keys(state.formConfig).map((key) => {
+        let value = state.formConfig[key];
+        return !value.isValid;
+      });
+      let invalidAmount = invalidList.reduce((a, b) => a + b, 0);
+      if (invalidAmount > 0) {
+        state.isValid = false;
+      } else {
+        state.isValid = true;
+      }
+      return { ...state };
+
+    case actionTypes.SUBMIT_START:
+      state.submitting = true;
+      state.submitSuccessMessage = "";
+      state.submitError = false;
+      state.submitErrorMessage = "";
+      return { ...state };
+    case actionTypes.SUBMIT_SUCCESS:
+      state.submitting = false;
+      state.submitSuccessMessage = "Submitted the message";
+      state.submitError = false;
+      state.submitErrorMessage = "";
+      return { ...state };
+    case actionTypes.SUBMIT_FAILED:
+      state.submitting = false;
+      state.submitError = true;
+      state.submitErrorMessage = action.error;
+      return { ...state };
 
     default:
       return state;

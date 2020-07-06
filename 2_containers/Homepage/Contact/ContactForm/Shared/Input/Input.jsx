@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { useSelector, useDispatch, shallowEqual } from "react-redux";
-import { updateValue } from "../../../../../../3_data/actions/contactFormActions";
+import {
+  updateValue,
+  validating,
+} from "../../../../../../3_data/actions/contactFormActions";
 
 const Input_ = styled.input`
   padding: 0 2rem;
@@ -34,7 +37,8 @@ const Input = (props) => {
   const dispatch = useDispatch();
 
   // input change
-  const inputChange = (id, value) => {
+  const inputChange = (id, type, value) => {
+    dispatch(validating(id, type, value));
     dispatch(updateValue(id, value));
   };
 
@@ -46,7 +50,7 @@ const Input = (props) => {
         type="text"
         placeholder={placeholder}
         value={value}
-        onChange={(e) => inputChange(props.id, e.target.value)}
+        onChange={(e) => inputChange(props.id, type, e.target.value)}
       />
     );
   } else if (type === "message") {
@@ -54,7 +58,7 @@ const Input = (props) => {
       <TextArea_
         placeholder={placeholder}
         value={value}
-        onChange={(e) => inputChange(props.id, e.target.value)}
+        onChange={(e) => inputChange(props.id, type, e.target.value)}
       />
     );
   }
