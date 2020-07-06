@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import SharedCard from "../../SharedProjectCard/SharedProjectCard";
-import { useSelector } from "react-redux";
+import { useSelector, shallowEqual } from "react-redux";
 
 const ProjectList_ = styled.ul`
   li {
@@ -16,8 +16,9 @@ const ProjectList_ = styled.ul`
 `;
 
 const ProjectList = (props) => {
-  const projectData = useSelector((state) =>
-    Object.keys(state.projectsReducer)
+  const projectData = useSelector(
+    (state) => Object.keys(state.projectsReducer),
+    shallowEqual
   );
   //   console.log(projectData);
   const projects = projectData.map((id) => {

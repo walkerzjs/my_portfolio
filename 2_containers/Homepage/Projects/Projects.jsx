@@ -6,6 +6,7 @@ import ProjectList from "./Content/ProjectList/Index";
 const Projects_ = styled.section`
   position: relative;
   padding: 5rem 13.5vw;
+  padding-bottom: 15.5rem;
 
   width: 100%;
 
