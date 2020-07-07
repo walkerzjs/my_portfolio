@@ -3,12 +3,28 @@ import styled from "styled-components";
 import DetailedIntro from "./Content/DetailedIntro";
 import SideDecor from "./Content/SideDecor";
 const AboutMe_ = styled.section`
-  position: relative;
+  /* position: relative; */
+  display: flex;
+  justify-content: space-between;
+  padding-top: 14vw;
   margin-top: -9vw;
   width: 100%;
-  height: 35.3vw;
+  height: 38.3vw;
   background: #f9f9f9 0% 0% no-repeat padding-box;
   opacity: 1;
+  @media screen and (max-width: 1023px) {
+    height: 600px;
+    margin-top: -200px;
+    padding-top: 280px;
+  }
+  @media screen and (max-width: 950px) {
+    height: auto;
+    min-height: 800px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 230px;
+    justify-content: start;
+  }
 `;
 
 const AboutMe = (props) => {

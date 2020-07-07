@@ -10,6 +10,24 @@ const Portrait_ = styled.div`
   background: transparent url("/portrait.svg") 0% 0% no-repeat padding-box;
   background-size: contain;
   opacity: 1;
+  @media screen and (max-width: 950px) {
+    width: 300px;
+    min-width: 200px;
+    height: 300px;
+    left: 50%;
+    right: 0;
+    top: 50%;
+    transform: translateX(-50%);
+
+    background-size: contain;
+  }
+  @media screen and (max-width: 348px) {
+    width: 90vw;
+    top: 58%;
+  }
+  @media screen and (max-width: 228px) {
+    top: 64%;
+  }
 `;
 
 const Portrait = (props) => {

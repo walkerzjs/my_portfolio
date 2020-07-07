@@ -11,7 +11,19 @@ const Intro_ = styled.div`
   width: 30.5vw;
   position: absolute;
   left: 16.5%;
-  top: 33%;
+  top: 32%;
+  @media screen and (max-width: 71rem) {
+    top: 28%;
+  }
+  @media screen and (max-width: 1023px) {
+    top: 20%;
+  }
+  @media screen and (max-width: 950px) {
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    width: 60vw;
+  }
 `;
 
 const Intro = (props) => {

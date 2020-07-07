@@ -4,6 +4,9 @@ import styled from "styled-components";
 const SelfIntro_ = styled.p`
   font-size: 2rem;
   margin-top: 5rem;
+  @media screen and (max-width: 71rem) {
+    margin-top: 3rem;
+  }
 `;
 
 const SelfIntro = (props) => {

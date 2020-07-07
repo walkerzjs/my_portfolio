@@ -12,6 +12,12 @@ const Hero_ = styled.section`
   background: transparent url("/heroBackground.svg") 0% 0% no-repeat;
   background-size: cover;
   opacity: 1;
+  @media screen and (max-width: 950px) {
+    height: 600px;
+  }
+  @media screen and (max-width: 492px) {
+    height: 700px;
+  }
 `;
 
 const Hero = (props) => {
