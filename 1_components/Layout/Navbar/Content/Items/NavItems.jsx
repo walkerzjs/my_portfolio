@@ -8,7 +8,7 @@ const NavItems_ = styled.ul`
   margin-right: 12.2vw;
   width: 28.4rem;
 
-  @media screen and (max-width: 42rem) {
+  @media screen and (max-width: 672px) {
     display: none;
   }
 `;

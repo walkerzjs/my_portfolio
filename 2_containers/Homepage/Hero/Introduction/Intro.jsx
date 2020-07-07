@@ -9,7 +9,7 @@ const Intro_ = styled.div`
   width: 30.5vw;
   margin-top: 9vw;
   margin-left: 16.5vw;
-  @media screen and (max-width: 71rem) {
+  @media screen and (max-width: 1136px) {
     margin-top: 8vw;
   }
   @media screen and (max-width: 1023px) {

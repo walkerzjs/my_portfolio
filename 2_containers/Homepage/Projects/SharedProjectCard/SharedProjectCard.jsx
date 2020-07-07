@@ -13,13 +13,13 @@ const SharedProjectCard_ = styled.div`
   padding: 4rem;
   opacity: 1;
 
-  @media screen and (max-width: 80rem) {
+  @media screen and (max-width: 1280px) {
     height: 35vw;
   }
-  @media screen and (max-width: 64rem) {
+  @media screen and (max-width: 1024px) {
     height: 38vw;
   }
-  @media screen and (max-width: 56rem) {
+  @media screen and (max-width: 896px) {
     height: 40.7rem;
 
     /* grid-template-rows:  */

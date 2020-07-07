@@ -8,7 +8,7 @@ const SideDecor_ = styled.img`
   width: 26.4vw;
   height: 19.6vw;
 
-  @media screen and (max-width: 80rem) {
+  @media screen and (max-width: 1280px) {
     margin-left: 11.2vw;
   }
   @media screen and (max-width: 950px) {

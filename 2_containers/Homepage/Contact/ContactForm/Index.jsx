@@ -13,7 +13,7 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media screen and (max-width: 80rem) {
+  @media screen and (max-width: 1280px) {
     width: 33vw;
   }
   @media screen and (max-width: 950px) {

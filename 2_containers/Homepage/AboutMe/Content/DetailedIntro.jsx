@@ -12,7 +12,7 @@ const DetailedIntro_ = styled.article`
     font-size: 2.2rem;
     margin-bottom: 3rem;
 
-    @media screen and (max-width: 80rem) {
+    @media screen and (max-width: 1280px) {
       font-size: 2rem;
     }
     @media screen and (max-width: 180px) {

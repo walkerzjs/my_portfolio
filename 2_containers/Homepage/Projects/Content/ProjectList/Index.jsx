@@ -14,29 +14,29 @@ const ProjectList_ = styled.ul`
   justify-content: space-between;
   grid-column-gap: 8vw;
 
-  @media screen and (max-width: 90.6rem) {
+  @media screen and (max-width: 1450px) {
     grid-column-gap: 4vw;
   }
-  @media screen and (max-width: 70rem) {
+  @media screen and (max-width: 1120px) {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 15vw;
     grid-row-gap: 5rem;
     /* grid-template-rows:  */
   }
-  @media screen and (max-width: 61.25rem) {
+  @media screen and (max-width: 980px) {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 12vw;
     grid-row-gap: 5rem;
   }
-  @media screen and (max-width: 56rem) {
+  @media screen and (max-width: 896px) {
     grid-column-gap: 8vw;
   }
-  @media screen and (max-width: 45rem) {
+  @media screen and (max-width: 720px) {
     grid-template-columns: 34rem;
     justify-content: center;
     grid-row-gap: 7rem;
   }
-  @media screen and (max-width: 28rem) {
+  @media screen and (max-width: 448px) {
     margin-top: 5rem;
     grid-template-columns: 32rem;
     grid-row-gap: 5rem;
