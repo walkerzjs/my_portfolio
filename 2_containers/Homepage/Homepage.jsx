@@ -4,6 +4,7 @@ import Hero from "./Hero/Hero";
 import AboutMe from "./AboutMe/AboutMe";
 import Projects from "./Projects/Projects";
 import Contact from "./Contact/Index";
+import Footer from "./Footer/Index";
 const HomePage_ = styled.div`
   /* position: relative; */
 `;
@@ -15,6 +16,7 @@ const HomePage = (props) => {
       <AboutMe />
       <Projects />
       <Contact />
+      <Footer />
     </HomePage_>
   );
 };
