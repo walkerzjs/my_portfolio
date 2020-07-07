@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 
 const Links_ = styled.div`
   font-size: 1.8rem;
+  padding-top: 2rem;
   height: 30%;
   & a {
     color: var(--black);

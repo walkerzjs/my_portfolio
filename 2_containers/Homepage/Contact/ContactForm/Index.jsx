@@ -13,6 +13,9 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media screen and (max-width: 80rem) {
+    width: 33vw;
+  }
 `;
 
 const Index = (props) => {

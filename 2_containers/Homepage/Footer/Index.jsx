@@ -5,7 +5,8 @@ import SocialMedia from "./SocialMedia";
 
 const Footer_ = styled.footer`
   width: 100%;
-  height: 28.8vw;
+  height: 22.8vw;
+
   background: transparent url("/footer.svg") 0% 0% no-repeat padding-box;
   opacity: 1;
   background-color: var(--grey-4);

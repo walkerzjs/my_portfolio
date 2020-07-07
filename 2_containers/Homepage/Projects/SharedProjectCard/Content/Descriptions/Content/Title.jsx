@@ -9,6 +9,7 @@ const Title_ = styled.h2`
 
   display: block;
   height: 20%;
+  padding-bottom: 6rem;
 `;
 
 const Title = (props) => {

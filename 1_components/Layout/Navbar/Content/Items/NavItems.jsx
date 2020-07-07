@@ -5,7 +5,7 @@ const NavItems_ = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 23.4rem;
+  margin-right: 12.2vw;
   width: 28.4rem;
 `;
 const NavItems = (props) => {

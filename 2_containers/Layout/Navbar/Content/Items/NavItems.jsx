@@ -7,7 +7,7 @@ const NavItems = (props) => {
     <NavItemsPresentation>
       <SharedNavItem
         ariaLabel="navigate to about me section"
-        id="#about me"
+        id="#aboutMe"
         label="About me"
       />
       <SharedNavItem id="#projects" label="Projects" />

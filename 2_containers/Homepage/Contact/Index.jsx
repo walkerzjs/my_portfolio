@@ -5,15 +5,17 @@ import SideDecor from "./SideDecor";
 
 const Index_ = styled.section`
   min-height: 42.2vw;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   background: #f9f9f9 0% 0% no-repeat padding-box;
   opacity: 1;
-  padding-top: 10.8rem;
+
   display: flex;
 `;
 
 const Index = (props) => {
   return (
-    <Index_>
+    <Index_ id="contact">
       <ContactForm />
       <SideDecor />
     </Index_>

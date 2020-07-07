@@ -13,7 +13,7 @@ const AboutMe_ = styled.section`
 
 const AboutMe = (props) => {
   return (
-    <AboutMe_>
+    <AboutMe_ id="aboutMe">
       <DetailedIntro />
       <SideDecor />
     </AboutMe_>

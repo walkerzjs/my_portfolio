@@ -7,6 +7,10 @@ const SideDecor_ = styled.img`
   display: inline-block;
   width: 26.4vw;
   height: 19.6vw;
+
+  @media screen and (max-width: 80rem) {
+    margin-left: 11.2vw;
+  }
 `;
 
 const SideDecor = (props) => {

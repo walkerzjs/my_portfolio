@@ -12,6 +12,10 @@ const DetailedIntro_ = styled.article`
     text-align: left;
     font-size: 2.2rem;
     margin-bottom: 3rem;
+
+    @media screen and (max-width: 80rem) {
+      font-size: 2rem;
+    }
   }
 `;
 

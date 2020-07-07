@@ -10,6 +10,13 @@
 html {
   font-size: 62.5%;
 }
+
+@media screen and (max-width: 90.6rem) {
+  html {
+    font-size: 55%;
+  }
+}
+
 body {
   font-family: "Noto Sans", serif;
 }
@@ -43,6 +50,9 @@ body {
   --unnamed-font-size-18: 18px;
   --unnamed-character-spacing-0: 0px;
   --unnamed-line-spacing-36: 36px;
+
+  /* media query */
+  --big1: 1450px;
 }
 
 /* Character Styles */
