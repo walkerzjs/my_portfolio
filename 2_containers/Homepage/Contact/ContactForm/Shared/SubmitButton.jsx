@@ -16,6 +16,11 @@ const Button_ = styled.button`
   border: none;
   color: var(--white);
   font-size: 1.9rem;
+  @media screen and (max-width: 1024px) {
+    width: 100px;
+    /* font-size: 1.8rem; */
+    height: 4.5rem;
+  }
 `;
 
 const SubmitButton = (props) => {

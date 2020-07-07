@@ -9,6 +9,12 @@ const Links_ = styled.div`
   & a {
     color: var(--black);
   }
+  @media screen and (max-width: 280px) {
+    font-size: 1.5rem;
+  }
+  @media screen and (max-width: 170px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const Links = (props) => {

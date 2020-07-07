@@ -11,6 +11,10 @@ const Index_ = styled.section`
   opacity: 1;
 
   display: flex;
+  @media screen and (max-width: 950px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Index = (props) => {

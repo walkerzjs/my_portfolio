@@ -14,6 +14,9 @@ const NavLink_ = styled.li`
     text-align: left;
 
     opacity: 1;
+    @media screen and (max-width: 166px) {
+      font-size: 1.4rem;
+    }
   }
 `;
 

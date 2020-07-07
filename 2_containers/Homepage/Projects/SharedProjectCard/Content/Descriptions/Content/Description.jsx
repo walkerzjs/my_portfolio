@@ -7,6 +7,12 @@ const Description_ = styled.p`
   letter-spacing: 0px;
   text-align: left;
   height: 40%;
+  @media screen and (max-width: 280px) {
+    font-size: 1.5rem;
+  }
+  @media screen and (max-width: 170px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const Description = (props) => {

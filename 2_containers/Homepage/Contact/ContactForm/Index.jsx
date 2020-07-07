@@ -16,6 +16,16 @@ const Form = styled.form`
   @media screen and (max-width: 80rem) {
     width: 33vw;
   }
+  @media screen and (max-width: 950px) {
+    margin-left: 0;
+    width: 60vw;
+  }
+  @media screen and (max-width: 534px) {
+    width: 70vw;
+  }
+  @media screen and (max-width: 412px) {
+    width: 90vw;
+  }
 `;
 
 const Index = (props) => {

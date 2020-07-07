@@ -11,6 +11,17 @@ const SideDecor_ = styled.img`
   @media screen and (max-width: 80rem) {
     margin-left: 11.2vw;
   }
+  @media screen and (max-width: 950px) {
+    margin-left: 0;
+    width: 45vw;
+    height: 60vw;
+  }
+  @media screen and (max-width: 534px) {
+    width: 55vw;
+  }
+  @media screen and (max-width: 412px) {
+    width: 65vw;
+  }
 `;
 
 const SideDecor = (props) => {

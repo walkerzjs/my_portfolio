@@ -37,11 +37,14 @@ const ProjectList_ = styled.ul`
     grid-row-gap: 7rem;
   }
   @media screen and (max-width: 28rem) {
+    margin-top: 5rem;
     grid-template-columns: 32rem;
     grid-row-gap: 5rem;
   }
-  @media screen and (max-width: 28rem) {
-    grid-template-columns: 28rem;
+
+  @media screen and (max-width: 300px) {
+    grid-template-columns: 90vw;
+    margin-top: 3rem;
   }
 `;
 

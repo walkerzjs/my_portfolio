@@ -7,6 +7,9 @@ const SelfIntro_ = styled.p`
   @media screen and (max-width: 71rem) {
     margin-top: 3rem;
   }
+  @media screen and (max-width: 320px) {
+    margin-top: 4rem;
+  }
 `;
 
 const SelfIntro = (props) => {

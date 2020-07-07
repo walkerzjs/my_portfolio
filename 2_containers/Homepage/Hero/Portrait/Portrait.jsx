@@ -2,31 +2,30 @@ import React from "react";
 import styled from "styled-components";
 
 const Portrait_ = styled.div`
-  position: absolute;
-  right: 13.8%;
-  top: 20%;
-  width: 33%;
+  /* position: absolute; */
+  /* right: 13.8%;
+  top: 20%; */
+  width: 33vw;
   height: 16.2vw;
+  margin-top: 6vw;
+  margin-right: 10.8vw;
   background: transparent url("/portrait.svg") 0% 0% no-repeat padding-box;
-  background-size: contain;
+  background-size: cover;
   opacity: 1;
   @media screen and (max-width: 950px) {
-    width: 300px;
-    min-width: 200px;
-    height: 300px;
-    left: 50%;
-    right: 0;
-    top: 50%;
-    transform: translateX(-50%);
-
-    background-size: contain;
+    width: 350px;
+    height: 175px;
+    margin-top: 70px;
+    margin-right: 0vw;
   }
-  @media screen and (max-width: 348px) {
-    width: 90vw;
-    top: 58%;
+  @media screen and (max-width: 546px) {
+    width: 70vw;
+    height: 35vw;
+    /* min-height: 150px; */
   }
   @media screen and (max-width: 228px) {
-    top: 64%;
+    width: 90vw;
+    height: 45vw;
   }
 `;
 

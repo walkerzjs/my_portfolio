@@ -24,6 +24,9 @@ const SharedProjectCard_ = styled.div`
 
     /* grid-template-rows:  */
   }
+  @media screen and (max-width: 280px) {
+    height: auto;
+  }
 `;
 
 const SharedProjectCard = (props) => {

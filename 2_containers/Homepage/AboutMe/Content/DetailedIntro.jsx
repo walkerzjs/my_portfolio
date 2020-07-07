@@ -2,11 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 const DetailedIntro_ = styled.article`
-  /* position: absolute; */
-  /* top: 40%; */
   margin-left: 16.4vw;
   width: 25.3vw;
-  height: 14.9vw;
+  height: auto;
   display: block;
   & p {
     color: var(--black);
@@ -17,15 +15,14 @@ const DetailedIntro_ = styled.article`
     @media screen and (max-width: 80rem) {
       font-size: 2rem;
     }
+    @media screen and (max-width: 180px) {
+      font-size: 1.7rem;
+    }
   }
-  /* @media screen and (max-width: 1023px) {
-    top: 45%;
-  } */
 
   @media screen and (max-width: 950px) {
     margin-left: 0;
     width: 60vw;
-    height: auto;
   }
 `;
 

@@ -10,6 +10,15 @@ const Proposal_ = styled.button`
   font-size: 1.9rem;
   color: var(--white);
   margin-top: 1.5rem;
+  display: block;
+
+  @media screen and (max-width: 320px) {
+    width: 80%;
+    font-size: 1.7rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+  }
 `;
 
 const Proposal = (props) => {

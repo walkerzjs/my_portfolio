@@ -5,24 +5,27 @@ import SayHi from "./IntroContent/SayHi";
 import SelfIntro from "./IntroContent/SelfIntro";
 
 const Intro_ = styled.div`
-  /* margin-left: 31.6rem;
-  margin-top: 22.6rem; */
-  height: 14.3vw;
+  height: auto;
   width: 30.5vw;
-  position: absolute;
-  left: 16.5%;
-  top: 32%;
+  margin-top: 9vw;
+  margin-left: 16.5vw;
   @media screen and (max-width: 71rem) {
-    top: 28%;
+    margin-top: 8vw;
   }
   @media screen and (max-width: 1023px) {
-    top: 20%;
+    margin-top: 7vw;
   }
   @media screen and (max-width: 950px) {
-    left: 50%;
-    top: 10%;
-    transform: translateX(-50%);
-    width: 60vw;
+    width: 70vw;
+    margin-left: 0;
+    height: auto;
+    margin-top: 10%;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+  }
+  @media screen and (max-width: 546px) {
+    margin-top: 80px;
   }
 `;
 
