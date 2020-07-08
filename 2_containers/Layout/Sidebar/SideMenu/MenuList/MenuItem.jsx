@@ -7,6 +7,7 @@ const MenuItem_ = styled.li`
   height: 5rem;
   width: 100%;
   padding-left: 10%;
+  cursor: pointer;
 `;
 
 const MenuItem = (props) => {

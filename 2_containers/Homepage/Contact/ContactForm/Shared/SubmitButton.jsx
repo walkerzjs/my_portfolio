@@ -16,6 +16,7 @@ const Button_ = styled.button`
   border: none;
   color: var(--white);
   font-size: 1.9rem;
+  cursor: pointer;
   @media screen and (max-width: 1024px) {
     width: 100px;
     /* font-size: 1.8rem; */

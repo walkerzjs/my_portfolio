@@ -10,6 +10,7 @@ const SidebarToggle_ = styled.button`
     width: 4rem;
     height: 4rem;
   }
+  cursor: pointer;
 `;
 
 const SidebarToggle = (props) => {

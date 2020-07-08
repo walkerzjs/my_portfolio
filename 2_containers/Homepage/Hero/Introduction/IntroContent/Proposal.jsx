@@ -11,6 +11,7 @@ const Proposal_ = styled.button`
   color: var(--white);
   margin-top: 1.5rem;
   display: block;
+  cursor: pointer;
 
   @media screen and (max-width: 320px) {
     width: 80%;

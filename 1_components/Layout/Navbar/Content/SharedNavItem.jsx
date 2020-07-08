@@ -11,6 +11,9 @@ const NavLink_ = styled.li`
   font-size: 2rem;
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--black);
+
+  cursor: pointer;
+
   /* text-align: left; */
 
   opacity: 1;
