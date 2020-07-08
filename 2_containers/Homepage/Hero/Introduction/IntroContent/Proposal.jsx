@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import useScroll from "../../../../Shared/useScroll";
 const Proposal_ = styled.button`
   background: var(--blue-3) 0% 0% no-repeat padding-box;
   border-radius: 7px;
@@ -22,7 +22,8 @@ const Proposal_ = styled.button`
 `;
 
 const Proposal = (props) => {
-  return <Proposal_>Hire me!</Proposal_>;
+  const onClick = useScroll("contact");
+  return <Proposal_ onClick={onClick}>Hire me!</Proposal_>;
 };
 
 export default Proposal;

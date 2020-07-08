@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import SharedNavItem from "../../../../1_components/Layout/Navbar/Content/SharedNavItem";
-
+import useScroll from "../../../Shared/useScroll";
 /**  let element = document.getElementById(`${props.sectionId}`);
 
   console.log("element: ", element);
@@ -14,18 +14,7 @@ import SharedNavItem from "../../../../1_components/Layout/Navbar/Content/Shared
         })
       } */
 const SharedNavButton = (props) => {
-  let element = null;
-  useEffect(() => {
-    element = document.getElementById(`${props.id}`);
-  }, []);
-
-  const onClick = () => {
-    window.scroll({
-      behavior: "smooth",
-      left: 0,
-      top: element.offsetTop - 62,
-    });
-  };
+  const onClick = useScroll(props.id);
   return <SharedNavItem id={props.id} label={props.label} onClick={onClick} />;
 };
 

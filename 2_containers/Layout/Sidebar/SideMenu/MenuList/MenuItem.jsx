@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
+import useScroll from "../../../../Shared/useScroll";
 
 const MenuItem_ = styled.li`
   font-size: 2rem;
@@ -9,20 +10,7 @@ const MenuItem_ = styled.li`
 `;
 
 const MenuItem = (props) => {
-  let element = null;
-  useEffect(() => {
-    element = document.getElementById(`${props.sectionId}`);
-  });
-
-  const onClick = () => {
-    window.scroll({
-      behavior: "smooth",
-      left: 0,
-      top: element.offsetTop - 62,
-    });
-  };
-
-  console.log("element: ", element);
+  const onClick = useScroll(props.sectionId);
   return <MenuItem_ onClick={onClick}>{props.sectionName}</MenuItem_>;
 };
 
