@@ -9,12 +9,6 @@ describe("shared navigation item", () => {
       id: "0",
       ariaLabel: "shared nav item",
     });
-    expect(
-      wrapper.contains(
-        <Link href="0">
-          <a aria-label="shared nav item">try me</a>
-        </Link>
-      )
-    ).toEqual(true);
+    expect(wrapper.contains("try me")).toEqual(true);
   });
 });
