@@ -5,7 +5,7 @@ const NameLogo = (props) => {
   return (
     <NameLogoPresentation>
       <SharedNavItem
-        id="/#intro"
+        id="intro"
         label="Junshuai Zhang"
         ariaLabel="navigate to home page"
       />

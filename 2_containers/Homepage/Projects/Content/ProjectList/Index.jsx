@@ -31,7 +31,7 @@ const ProjectList_ = styled.ul`
   @media screen and (max-width: 896px) {
     grid-column-gap: 8vw;
   }
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 750px) {
     grid-template-columns: 34rem;
     justify-content: center;
     grid-row-gap: 7rem;

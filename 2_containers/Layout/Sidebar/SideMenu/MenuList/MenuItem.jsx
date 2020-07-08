@@ -21,9 +21,20 @@ const MenuItem = (props) => {
   const onClick = () => {
     dispatch(toggleSideDrawer());
   };
+  let element = document.getElementById(`${props.sectionId}`);
+
+  console.log("element: ", element);
   return (
-    <MenuItem_ onClick={onClick}>
-      <a href={`#${props.sectionId}`}>{props.sectionName}</a>
+    <MenuItem_
+      onClick={() =>
+        window.scroll({
+          behavior: "smooth",
+          left: 0,
+          top: element.offsetTop - 62,
+        })
+      }
+    >
+      {props.sectionName}
     </MenuItem_>
   );
 };

@@ -7,11 +7,11 @@ const NavItems = (props) => {
     <NavItemsPresentation>
       <SharedNavItem
         ariaLabel="navigate to about me section"
-        id="#aboutMe"
+        id="aboutMe"
         label="About me"
       />
-      <SharedNavItem id="#projects" label="Projects" />
-      <SharedNavItem id="#contact" label="Contact" />
+      <SharedNavItem id="projects" label="Projects" />
+      <SharedNavItem id="contact" label="Contact" />
     </NavItemsPresentation>
   );
 };
