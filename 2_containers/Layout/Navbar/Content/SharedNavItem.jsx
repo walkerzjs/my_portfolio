@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SharedNavItem from "../../../../1_components/Layout/Navbar/Content/SharedNavItem";
 
 /**  let element = document.getElementById(`${props.sectionId}`);
@@ -14,7 +14,11 @@ import SharedNavItem from "../../../../1_components/Layout/Navbar/Content/Shared
         })
       } */
 const SharedNavButton = (props) => {
-  let element = document.getElementById(`${props.id}`);
+  let element = null;
+  useEffect(() => {
+    element = document.getElementById(`${props.id}`);
+  }, []);
+
   const onClick = () => {
     window.scroll({
       behavior: "smooth",

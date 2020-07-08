@@ -1,42 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
-import { useDispatch } from "react-redux";
-import { toggleSideDrawer } from "../../../../../3_data/actions/sidebarActions";
+
 const MenuItem_ = styled.li`
-  & a {
-    text-decoration: none;
-    color: var(--black);
-    text-align: left;
-  }
   font-size: 2rem;
   height: 5rem;
   width: 100%;
   padding-left: 10%;
-  /* display: flex;
-  justify-content: flex-end; */
 `;
 
 const MenuItem = (props) => {
-  const dispatch = useDispatch();
+  let element = null;
+  useEffect(() => {
+    element = document.getElementById(`${props.sectionId}`);
+  });
+
   const onClick = () => {
-    dispatch(toggleSideDrawer());
+    window.scroll({
+      behavior: "smooth",
+      left: 0,
+      top: element.offsetTop - 62,
+    });
   };
-  let element = document.getElementById(`${props.sectionId}`);
 
   console.log("element: ", element);
-  return (
-    <MenuItem_
-      onClick={() =>
-        window.scroll({
-          behavior: "smooth",
-          left: 0,
-          top: element.offsetTop - 62,
-        })
-      }
-    >
-      {props.sectionName}
-    </MenuItem_>
-  );
+  return <MenuItem_ onClick={onClick}>{props.sectionName}</MenuItem_>;
 };
 
 export default MenuItem;
