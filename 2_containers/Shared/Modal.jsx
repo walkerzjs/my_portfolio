@@ -21,7 +21,7 @@ const Modal_ = styled.div`
 `;
 
 const Modal = (props) => {
-  console.log("isOpen:", props.isOpen);
+  //   console.log("isOpen:", props.isOpen);
   return <Modal_ onClick={() => props.onClick()} isOpen={props.isOpen} />;
 };
 export default Modal;
