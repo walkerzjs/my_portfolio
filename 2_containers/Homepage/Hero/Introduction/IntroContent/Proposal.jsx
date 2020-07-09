@@ -1,17 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import useScroll from "../../../../Shared/useScroll";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 const Proposal_ = styled.button`
   background: var(--blue-3) 0% 0% no-repeat padding-box;
   border-radius: 7px;
   width: 16.8rem;
   height: 5rem;
   border: none;
-  font-size: 1.9rem;
-  color: var(--white);
+
   margin-top: 1.5rem;
   display: block;
   cursor: pointer;
+  & a {
+    text-decoration: none;
+    font-size: 1.9rem;
+    color: var(--white);
+    display: block;
+  }
 
   @media screen and (max-width: 320px) {
     width: 80%;
@@ -23,8 +28,13 @@ const Proposal_ = styled.button`
 `;
 
 const Proposal = (props) => {
-  const onClick = useScroll("contact");
-  return <Proposal_ onClick={onClick}>Hire me!</Proposal_>;
+  return (
+    <Proposal_>
+      <AnchorLink offset="62" href="#aboutMe">
+        Hire me!
+      </AnchorLink>
+    </Proposal_>
+  );
 };
 
 export default Proposal;

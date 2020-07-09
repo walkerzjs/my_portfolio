@@ -1,20 +1,23 @@
 import React from "react";
 import styled from "styled-components";
-import Link from "next/link";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const NavLink_ = styled.li`
   list-style: none;
 
-  /* text-decoration: none; */
   /* width: 92px; */
   /* height: 2rem; */
-  font-size: 2rem;
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--black);
+  & a {
+    font-size: 2rem;
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--black);
+    text-decoration: none;
+    text-decoration: none;
+  }
 
   cursor: pointer;
 
-  /* text-align: left; */
+  /* text-decoration: none; */
 
   opacity: 1;
   @media screen and (max-width: 166px) {
@@ -24,8 +27,10 @@ const NavLink_ = styled.li`
 
 const SharedNavButton = (props) => {
   return (
-    <NavLink_ aria-label={props.ariaLabel} onClick={props.onClick}>
-      {props.label}
+    <NavLink_ aria-label={`link to ${props.label} section`}>
+      <AnchorLink offset="62" href={`/${props.id}`}>
+        {props.label}
+      </AnchorLink>
     </NavLink_>
   );
 };

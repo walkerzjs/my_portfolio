@@ -1,18 +1,29 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
-import useScroll from "../../../../Shared/useScroll";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const MenuItem_ = styled.li`
-  font-size: 2rem;
-  height: 5rem;
-  width: 100%;
-  padding-left: 10%;
+  & a {
+    font-size: 2rem;
+    height: 5rem;
+    width: 100%;
+    padding-left: 10%;
+    text-decoration: none;
+    color: var(--black);
+    display: block;
+  }
+
   cursor: pointer;
 `;
 
 const MenuItem = (props) => {
-  const onClick = useScroll(props.sectionId);
-  return <MenuItem_ onClick={onClick}>{props.sectionName}</MenuItem_>;
+  return (
+    <MenuItem_>
+      <AnchorLink offset="62" href={`/${props.sectionId}`}>
+        {props.sectionName}
+      </AnchorLink>
+    </MenuItem_>
+  );
 };
 
 export default MenuItem;
