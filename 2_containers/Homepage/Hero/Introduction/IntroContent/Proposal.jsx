@@ -16,6 +16,11 @@ const Proposal_ = styled.button`
     font-size: 1.9rem;
     color: var(--white);
     display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   @media screen and (max-width: 320px) {

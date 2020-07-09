@@ -11,6 +11,8 @@ const MenuItem_ = styled.li`
     text-decoration: none;
     color: var(--black);
     display: block;
+    display: flex;
+    align-items: center;
   }
 
   cursor: pointer;

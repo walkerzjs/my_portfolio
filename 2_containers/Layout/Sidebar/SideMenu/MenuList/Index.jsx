@@ -7,7 +7,7 @@ const MenuList_ = styled.ul`
   height: 100%;
   background-color: #f9f9f9;
   padding: 2rem;
-  padding-top: 4rem;
+  padding-top: 3rem;
 `;
 
 const MenuList = (props) => {
