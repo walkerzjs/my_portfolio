@@ -35,7 +35,7 @@ const Proposal_ = styled.button`
 const Proposal = (props) => {
   return (
     <Proposal_>
-      <AnchorLink offset="62" href="#aboutMe">
+      <AnchorLink offset="62" href="#contact">
         Hire me!
       </AnchorLink>
     </Proposal_>
