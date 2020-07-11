@@ -23,7 +23,7 @@ const MenuItem = (props) => {
     <MenuItem_>
       <AnchorLink
         offset="62"
-        href={`/${props.sectionId}`}
+        href={`#${props.sectionId}`}
         aria-label={`Click to ${props.sectionName} section`}
       >
         {props.sectionName}
