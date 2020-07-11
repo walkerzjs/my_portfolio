@@ -8,12 +8,9 @@ export const Nav = styled.nav`
   left: 0px;
   width: 100%;
   height: 7rem;
-
-  border: 2px solid var(--grey-1);
   background-color: var(--white);
   border-bottom: 2px solid #e5e5e5;
   opacity: 1;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
