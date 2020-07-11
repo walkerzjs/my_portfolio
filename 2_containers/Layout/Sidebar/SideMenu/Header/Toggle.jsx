@@ -12,7 +12,7 @@ const SidebarToggleDrawer = (props) => {
   };
   return (
     <SidebarToggle_ onClick={onClick}>
-      <SidebarToggle />
+      <SidebarToggle ariaLabel="Toggle side drawer" />
     </SidebarToggle_>
   );
 };

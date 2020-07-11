@@ -21,14 +21,20 @@ const Image_ = styled.div`
 `;
 
 const Image = (props) => {
-  const image = useSelector((state) => state.projectsReducer[props.id].image);
+  const { image, title } = useSelector(
+    (state) => state.projectsReducer[props.id]
+  );
   const address = useSelector(
     (state) => state.projectsReducer[props.id].website
   );
   return (
     <Image_>
-      <a href={address} target="_blank">
-        <img src={image} alt="project screenshot" />
+      <a
+        href={address}
+        target="_blank"
+        aria-label={`Link to ${title} project website`}
+      >
+        <img src={image} alt={`Screenshot of ${title} project website`} />
       </a>
     </Image_>
   );

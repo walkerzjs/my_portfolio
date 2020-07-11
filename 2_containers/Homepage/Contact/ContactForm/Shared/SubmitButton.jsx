@@ -39,7 +39,11 @@ const SubmitButton = (props) => {
     }
   };
 
-  return <Button_ onClick={(e) => onSubmit(e)}>Submit</Button_>;
+  return (
+    <Button_ aria-label="Submit your message" onClick={(e) => onSubmit(e)}>
+      Submit
+    </Button_>
+  );
 };
 
 export default SubmitButton;

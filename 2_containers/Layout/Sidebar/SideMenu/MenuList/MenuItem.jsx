@@ -21,7 +21,11 @@ const MenuItem_ = styled.li`
 const MenuItem = (props) => {
   return (
     <MenuItem_>
-      <AnchorLink offset="62" href={`/${props.sectionId}`}>
+      <AnchorLink
+        offset="62"
+        href={`/${props.sectionId}`}
+        aria-label={`Click to ${props.sectionName} section`}
+      >
         {props.sectionName}
       </AnchorLink>
     </MenuItem_>

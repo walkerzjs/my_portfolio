@@ -64,6 +64,8 @@ const Input = (props) => {
         isValid={isValid}
         onChange={(e) => inputChange(props.id, type, e.target.value)}
         onBlur={(e) => inputChange(props.id, type, e.target.value)}
+        // https://stackoverflow.com/questions/36630230/replace-last-character-of-string-using-javascript
+        aria-label={`Input your ${placeholder.replace(/.$/, "")}`}
       />
     );
   } else if (type === "message") {
@@ -74,6 +76,7 @@ const Input = (props) => {
         isValid={isValid}
         onChange={(e) => inputChange(props.id, type, e.target.value)}
         onBlur={(e) => inputChange(props.id, type, e.target.value)}
+        aria-label={`Input your ${placeholder.replace(/.$/, "")}`}
       />
     );
   }
