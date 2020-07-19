@@ -1,4 +1,5 @@
-const express = require("express");
+//blog.logrocket.com/how-to-build-a-server-rendered-react-app-with-next-express-d5a389e7ab2f/
+https: const express = require("express");
 const next = require("next");
 const { join } = require("path");
 
@@ -10,11 +11,7 @@ app
   .prepare()
   .then(() => {
     const server = express();
-    // server.get("/service-worker.js", (req, res) => {
-    //   res.sendFile(join(__dirname, ".next", "service-worker.js"));
-    // });
     server.get("*", (req, res) => {
-      //   console.log("req: ", req.originalUrl);
       if (req.originalUrl === "/service-worker.js") {
         return res.sendFile(join(__dirname, ".next", "service-worker.js"));
       } else {
@@ -31,13 +28,3 @@ app
     console.error(ex.stack);
     process.exit(1);
   });
-
-/**   if (pathname === "/service-worker.js") {
-      const filePath = join(__dirname, ".next", pathname);
-      console.log("filepath: ", filePath);
-      console.log("res: ", res);
-      //   app.serveStatic(req, res, filePath);
-      res.sendFile(resolve(__dirname, ".next", "service-worker.js"));
-    } else {
-      handle(req, res, parsedUrl);
-    } */

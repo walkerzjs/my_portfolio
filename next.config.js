@@ -4,6 +4,17 @@
 //   },
 // };
 
-const withOffline = require("next-offline");
+// const withOffline = require("next-offline");
 
-module.exports = withOffline();
+// module.exports = withOffline();
+
+const withPWA = require("next-pwa");
+
+module.exports = withPWA({
+  pwa: {
+    dest: "public",
+  },
+  excludeFile: (str) => {
+    return /\*.{spec,test}.js/.test(str);
+  },
+});

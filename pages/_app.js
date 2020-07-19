@@ -25,7 +25,13 @@ export default function App({ Component, pageProps }) {
           name="description"
           content="Portfolio for Junshuai Zhang (Jacob)"
         />
+        <meta name="theme-color" content="#ffffff" />
+        <link rel="manifest" href="/manifest.json" />
         <link rel="icon" type="image/png" href="/favicon.png" />
+        <link
+          rel="apple-touch-icon"
+          href="/images/icons/icon-512x512.png"
+        ></link>
         <title>Junshuai Zhang's portfolio</title>
       </Head>
       <Provider store={store}>

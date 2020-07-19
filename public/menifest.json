@@ -1,9 +1,0 @@
-{
-  "name": "my portfolio",
-  "short_name": "myPortfolio",
-  "description": "I am Junshuai Zhang (Jacob) and this is my portfolio",
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "start_url": "/",
-  "display": "standalone"
-}
