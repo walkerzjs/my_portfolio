@@ -1,5 +1,5 @@
 const { createServer } = require("http");
-const { join } = require("path");
+const { join, resolve } = require("path");
 const { parse } = require("url");
 const next = require("next");
 
@@ -16,7 +16,9 @@ app.prepare().then(() => {
     if (pathname === "/service-worker.js") {
       const filePath = join(__dirname, ".next", pathname);
       console.log("filepath: ", filePath);
-      app.serveStatic(req, res, filePath);
+      console.log("res: ", res);
+      //   app.serveStatic(req, res, filePath);
+      res.sendFile(resolve(__dirname, ".next", "service-worker.js"));
     } else {
       handle(req, res, parsedUrl);
     }
