@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HomePage from "../2_containers/Homepage/Homepage";
 // import dynamic from "next/dynamic";
 const Home = (props) => {
+  // useEffect(() => {
+  //   if ("serviceWorker" in navigator) {
+  //     window.addEventListener("load", function () {
+  //       navigator.serviceWorker.register("/sw.js").then(
+  //         function (registration) {
+  //           // Registration was successful
+  //           console.log(
+  //             "ServiceWorker registration successful with scope: ",
+  //             registration.scope
+  //           );
+  //         },
+  //         function (err) {
+  //           // registration failed :(
+  //           console.log("ServiceWorker registration failed: ", err);
+  //         }
+  //       );
+  //     });
+  //   }
+  // }, []);
   return <HomePage></HomePage>;
 };
 

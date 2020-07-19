@@ -44,7 +44,7 @@ const Input = (props) => {
     (state) => state.contactFormReducer.formConfig[props.id],
     shallowEqual
   );
-  console.log("idValid: ", isValid);
+  // console.log("idValid: ", isValid);
   const dispatch = useDispatch();
 
   // input change

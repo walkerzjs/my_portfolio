@@ -29,6 +29,7 @@ const SocialMedia = (props) => {
       <a
         href="https://github.com/walkerzjs"
         target="_blank"
+        rel="noopener noreferrer"
         aria-label="my github link"
       >
         <img src="/logoGithub.svg" alt="my github link image" />

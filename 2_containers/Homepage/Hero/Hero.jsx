@@ -16,17 +16,11 @@ const Hero_ = styled.section`
   opacity: 1;
   @media screen and (max-width: 950px) {
     height: 710px;
-    /* width: 100vw; */
-    /* background: transparent url("/heroBackgroundSmall.svg") 0% 0% no-repeat
-      padding-box;
-    background-size: contain; */
+
     flex-direction: column;
     align-items: center;
     justify-content: start;
   }
-  /* @media screen and (max-width: 492px) {
-    height: 700px;
-  } */
 `;
 
 const Hero = (props) => {

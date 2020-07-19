@@ -14,7 +14,6 @@ const SidebarToggle_ = styled.button`
 `;
 
 const SidebarToggle = (props) => {
-  console.log("aria-label: ", props.ariaLabel);
   return (
     <SidebarToggle_ className="SidebarToggle" aria-label={props.ariaLabel}>
       <img src="/navMenuToggle.svg" />

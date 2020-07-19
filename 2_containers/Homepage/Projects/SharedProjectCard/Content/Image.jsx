@@ -32,6 +32,7 @@ const Image = (props) => {
       <a
         href={address}
         target="_blank"
+        rel="noopener noreferrer"
         aria-label={`Link to ${title} project website`}
       >
         <img src={image} alt={`Screenshot of ${title} project website`} />

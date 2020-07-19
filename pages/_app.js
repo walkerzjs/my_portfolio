@@ -21,6 +21,10 @@ export default function App({ Component, pageProps }) {
   return (
     <div>
       <Head>
+        <meta
+          name="description"
+          content="Portfolio for Junshuai Zhang (Jacob)"
+        />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <title>Junshuai Zhang's portfolio</title>
       </Head>

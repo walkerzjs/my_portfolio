@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const NameLogo_ = styled.div`
+const NameLogo_ = styled.ul`
   margin-left: 9.3vw;
   @media screen and (max-width: 672px) {
     margin-left: 2rem;
