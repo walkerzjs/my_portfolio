@@ -1,3 +1,4 @@
+// https://github.com/vercel/next.js/blob/canary/examples/with-google-analytics/pages/_document.js
 export const GA_TRACKING_ID = "UA-172141311-1";
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
