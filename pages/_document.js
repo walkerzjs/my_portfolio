@@ -33,7 +33,7 @@ export default class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
-          <script
+          {/* <script
             dangerouslySetInnerHTML={{
               __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -41,9 +41,9 @@ export default class MyDocument extends Document {
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
               })(window,document,'script','dataLayer','GTM-5XH934W');`,
             }}
-          ></script>
+          ></script> */}
           {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <script
+          {/* <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
           />
@@ -58,15 +58,15 @@ export default class MyDocument extends Document {
             });
           `,
             }}
-          />
+          /> */}
         </Head>
         <body>
-          <noscript
+          {/* <noscript
             dangerouslySetInnerHTML={{
               __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XH934W"
               height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
             }}
-          ></noscript>
+          ></noscript> */}
           <Main />
           <NextScript />
         </body>
