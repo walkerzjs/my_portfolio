@@ -13,7 +13,6 @@ const initialState = {
       "A project made following the course: ",
       <a
         href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/"
-        style={{ color: "var(--black)" }}
         key="courseReference"
       >
         React-The Complete Guide

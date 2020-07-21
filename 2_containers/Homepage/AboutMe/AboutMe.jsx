@@ -2,6 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import DetailedIntro from "./Content/DetailedIntro";
 import SideDecor from "./Content/SideDecor";
+import theme from "styled-theming";
+
+const background = theme("mode", {
+  light: "#f9f9f9 0% 0% no-repeat padding-box",
+  dark: "var(--grey-5) 0% 0% no-repeat padding-box",
+});
+
 const AboutMe_ = styled.section`
   /* position: relative; */
   display: flex;
@@ -10,8 +17,10 @@ const AboutMe_ = styled.section`
   margin-top: -9vw;
   width: 100%;
   height: 38.3vw;
-  background: #f9f9f9 0% 0% no-repeat padding-box;
+  background: ${background};
+  transition: all 0.2s ease-out;
   opacity: 1;
+
   @media screen and (max-width: 1023px) {
     height: 600px;
     margin-top: -200px;

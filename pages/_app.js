@@ -1,23 +1,38 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Provider } from "react-redux";
 import { useStore } from "../3_data/store";
+import storage from "local-storage-fallback";
 import "./_app.css";
 import Layout from "../2_containers/Layout/Layout";
 import Head from "next/head";
 import Router from "next/router";
 import * as gtag from "../2_containers/Shared/gtag";
+import { ThemeProvider } from "styled-components";
 
 export default function App({ Component, pageProps }) {
+  const [theme, setTheme] = useState({ mode: "light" });
+
   const store = useStore(pageProps.initialReduxState);
+
   useEffect(() => {
     const handleRouteChange = (url) => {
       gtag.pageview(url);
     };
     Router.events.on("routeChangeComplete", handleRouteChange);
+
+    //Because of ssr, need to use this to initialize theme from storage
+    //(no storage on server, need to wait until the page rendered)
+    const savedTheme = storage.getItem("theme");
+    setTheme(savedTheme ? JSON.parse(savedTheme) : { mode: "light" });
+
     return () => {
       Router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, []);
+
+  useEffect(() => {
+    storage.setItem("theme", JSON.stringify(theme));
+  }, [theme]);
   return (
     <div>
       <Head>
@@ -34,10 +49,13 @@ export default function App({ Component, pageProps }) {
         ></link>
         <title>Junshuai Zhang's portfolio</title>
       </Head>
+
       <Provider store={store}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <ThemeProvider theme={{ mode: theme.mode, setTheme: setTheme }}>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ThemeProvider>
       </Provider>
     </div>
   );

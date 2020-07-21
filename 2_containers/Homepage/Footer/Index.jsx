@@ -2,6 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import Notes from "./Notes";
 import SocialMedia from "./SocialMedia";
+import theme from "styled-theming";
+
+const backgroundColor = theme("mode", {
+  light: "#f9f9f9",
+  dark: "var(--grey-5)",
+});
 
 const Footer_ = styled.footer`
   width: 100%;
@@ -10,7 +16,8 @@ const Footer_ = styled.footer`
   background: transparent url("/footer.svg") 0% 0% no-repeat padding-box;
   background-size: cover;
   opacity: 1;
-  background-color: var(--grey-4);
+  background-color: ${backgroundColor};
+  transition: all 0.2s ease-out;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;

@@ -20,16 +20,32 @@ const SpinnerC = styled.div`
     width: 11em;
     height: 11em;
     border-radius: 50%;
-    background: #000000;
-    background: -moz-linear-gradient(left, #000000 10%, rgba(0, 0, 0, 0) 42%);
+    background: #ffffff;
+    background: -moz-linear-gradient(
+      left,
+      #ffffff 10%,
+      rgba(255, 255, 255, 0) 42%
+    );
     background: -webkit-linear-gradient(
       left,
-      #000000 10%,
-      rgba(0, 0, 0, 0) 42%
+      #ffffff 10%,
+      rgba(255, 255, 255, 0) 42%
     );
-    background: -o-linear-gradient(left, #000000 10%, rgba(0, 0, 0, 0) 42%);
-    background: -ms-linear-gradient(left, #000000 10%, rgba(0, 0, 0, 0) 42%);
-    background: linear-gradient(to right, #000000 10%, rgba(0, 0, 0, 0) 42%);
+    background: -o-linear-gradient(
+      left,
+      #ffffff 10%,
+      rgba(255, 255, 255, 0) 42%
+    );
+    background: -ms-linear-gradient(
+      left,
+      #ffffff 10%,
+      rgba(255, 255, 255, 0) 42%
+    );
+    background: linear-gradient(
+      to right,
+      #ffffff 10%,
+      rgba(255, 255, 255, 0) 42%
+    );
     position: relative;
     -webkit-animation: load3 1.4s infinite linear;
     animation: load3 1.4s infinite linear;
@@ -40,7 +56,7 @@ const SpinnerC = styled.div`
   &:before {
     width: 50%;
     height: 50%;
-    background: #000000;
+    background: #ffffff;
     border-radius: 100% 0 0 0;
     position: absolute;
     top: 0;
@@ -48,7 +64,7 @@ const SpinnerC = styled.div`
     content: "";
   }
   &:after {
-    background: ${backgroundColor};
+    background: var(--grey-5);
     width: 75%;
     height: 75%;
     border-radius: 50%;

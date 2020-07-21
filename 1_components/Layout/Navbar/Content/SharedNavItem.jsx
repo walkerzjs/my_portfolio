@@ -1,6 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import theme from "styled-theming";
+
+const textColor = theme("mode", {
+  light: "var(--black)",
+  dark: "white",
+});
+// appl
 
 const NavLink_ = styled.li`
   list-style: none;
@@ -10,9 +17,11 @@ const NavLink_ = styled.li`
   & a {
     font-size: 2rem;
     letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(--black);
+    /* color: var(--black); */
+    color: ${textColor};
     text-decoration: none;
     text-decoration: none;
+    transition: all 0.2s ease-out;
   }
 
   cursor: pointer;

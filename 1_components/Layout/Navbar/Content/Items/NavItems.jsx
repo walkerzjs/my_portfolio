@@ -5,8 +5,8 @@ const NavItems_ = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 12.2vw;
-  width: 28.4rem;
+  margin-right: 9.3vw;
+  width: 34.4rem;
 
   @media screen and (max-width: 672px) {
     display: none;

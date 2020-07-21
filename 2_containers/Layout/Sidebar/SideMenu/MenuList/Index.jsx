@@ -1,13 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 import MenuItem from "./MenuItem";
+import theme from "styled-theming";
+import ThemeToggle from "./ThemeToggle";
+const backgroundColor = theme("mode", {
+  light: "var(--white)",
+  dark: "var(--grey-5)",
+});
 
 const MenuList_ = styled.ul`
   list-style: none;
   height: 100%;
-  background-color: #f9f9f9;
+  background-color: ${backgroundColor};
   padding: 2rem;
   padding-top: 3rem;
+  transition: all 0.2s ease-out;
 `;
 
 const MenuList = (props) => {
@@ -16,6 +23,7 @@ const MenuList = (props) => {
       <MenuItem sectionId="aboutMe" sectionName="About Me" />
       <MenuItem sectionId="projects" sectionName="Projects" />
       <MenuItem sectionId="contact" sectionName="Contact" />
+      <ThemeToggle />
     </MenuList_>
   );
 };

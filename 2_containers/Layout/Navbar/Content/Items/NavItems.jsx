@@ -1,7 +1,7 @@
 import React from "react";
 import SharedNavItem from "../SharedNavItem";
 import NavItemsPresentation from "../../../../../1_components/Layout/Navbar/Content/Items/NavItems";
-
+import ThemeToggle from "./ThemeToggle";
 const NavItems = (props) => {
   return (
     <NavItemsPresentation>
@@ -12,6 +12,8 @@ const NavItems = (props) => {
       />
       <SharedNavItem id="projects" label="Projects" />
       <SharedNavItem id="contact" label="Contact" />
+
+      <ThemeToggle />
     </NavItemsPresentation>
   );
 };

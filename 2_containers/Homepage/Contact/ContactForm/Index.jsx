@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useContext } from "react";
+import styled, { ThemeContext } from "styled-components";
 import Input from "./Shared/Input/Index";
 import SubmitButton from "./Shared/SubmitButton";
 import SubmitError from "./SubmitError";
 import { useSelector, shallowEqual } from "react-redux";
 import Spinner from "../../../../2_containers/Shared/Spinner";
-
+import SpinnerWhite from "../../../../2_containers/Shared/SpinnerWhite";
 const Form = styled.form`
   margin-left: 13.5vw;
   width: 28.3vw;
@@ -29,6 +29,7 @@ const Form = styled.form`
 `;
 
 const Index = (props) => {
+  const Theme = useContext(ThemeContext);
   const keys = useSelector(
     (state) =>
       Object.keys(state.contactFormReducer.formConfig).sort((a, b) => a - b),
@@ -37,13 +38,6 @@ const Index = (props) => {
   const isSubmitting = useSelector(
     (state) => state.contactFormReducer.submitting
   );
-  const submitError = useSelector(
-    (state) => state.contactFormReducer.submitError
-  );
-  const submitErrorMessage = useSelector(
-    (state) => state.contactFormReducer.submitErrorMessage
-  );
-  //   console.log("isSubmitting: ", isSubmitting);
   let content = (
     <>
       <SubmitError />
@@ -53,9 +47,13 @@ const Index = (props) => {
       <SubmitButton />
     </>
   );
-  if (isSubmitting) {
+  if (isSubmitting && Theme.mode === "light") {
     content = <Spinner />;
   }
+  if (isSubmitting && Theme.mode === "dark") {
+    content = <SpinnerWhite />;
+  }
+
   return <Form>{content}</Form>;
 };
 

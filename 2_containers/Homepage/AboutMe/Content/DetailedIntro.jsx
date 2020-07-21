@@ -1,5 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import theme from "styled-theming";
+
+const textColor = theme("mode", {
+  light: "var(--black)",
+  dark: "var(--white)",
+});
 
 const DetailedIntro_ = styled.article`
   margin-left: 16.4vw;
@@ -7,7 +13,8 @@ const DetailedIntro_ = styled.article`
   height: auto;
   display: block;
   & p {
-    color: var(--black);
+    color: ${textColor};
+    transition: all 0.2s ease-out;
     text-align: left;
     font-size: 2.2rem;
     margin-bottom: 3rem;

@@ -1,12 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
+import theme from "styled-theming";
+
+const textColor = theme("mode", {
+  light: "var(--black)",
+  dark: "var(--white)",
+});
 
 const Title_ = styled.h2`
   text-align: left;
   font-size: 1.8rem;
   margin-top: 3rem;
-
+  color: ${textColor};
+  transition: all 0.2s ease-out;
   display: block;
   height: 20%;
   padding-bottom: 6rem;

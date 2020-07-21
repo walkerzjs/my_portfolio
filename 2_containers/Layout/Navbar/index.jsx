@@ -8,7 +8,9 @@ const Navbar = (props) => {
   return (
     <Nav>
       <NameLogo />
+
       <NavItems />
+
       <SidebarToggle />
     </Nav>
   );
