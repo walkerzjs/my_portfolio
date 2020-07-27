@@ -5,6 +5,7 @@
 *::before {
   margin: 0;
   padding: 0;
+  border-width: 0px;
   box-sizing: border-box;
 }
 html {
@@ -33,12 +34,14 @@ body {
   --grey-3: #767676;
   --grey-1: #e5e5e5;
   --grey-4: #f9f9f9;
-  --grey-5: #525252;
+  /* --grey-5: #525252; */
+  --grey-5: #2e2e2e;
   --green-3: #6cc44d;
   --purple-1: #bdb0fd;
   --purple-3: #8571f6;
   --purple-2: #a494fc;
   --green-2: #92e076;
+  --red: #ff5f57;
 
   /* Font/text values */
   --unnamed-font-family-noto-sans: Noto Sans;

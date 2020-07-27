@@ -8,11 +8,16 @@ const SideMenu_ = styled.div`
   position: fixed;
   right: 0;
   top: 0;
+  /* the next two lines are from https://portfolio.smakosh.com */
+  overflow-x: auto;
+  overflow-y: auto;
+
   width: 250px;
   max-width: 100vw;
   height: 100vh;
+  /* height: 50rem; */
   /* background-color: white; */
-  z-index: 1200;
+  z-index: 9000;
 
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
   /* transition-property: opacity, transform;

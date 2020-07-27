@@ -10,13 +10,14 @@ const background = theme("mode", {
 });
 
 const Projects_ = styled.section`
-  position: relative;
+  /* position: relative; */
   padding: 5rem 13.5vw;
   padding-bottom: 11.5rem;
   width: 100%;
   background: ${background};
   opacity: 1;
   transition: all 0.2s ease-out;
+  margin-top: -2px;
 `;
 
 const Projects = (props) => {

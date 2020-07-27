@@ -1,5 +1,5 @@
-//blog.logrocket.com/how-to-build-a-server-rendered-react-app-with-next-express-d5a389e7ab2f/
-https: const express = require("express");
+//https://blog.logrocket.com/how-to-build-a-server-rendered-react-app-with-next-express-d5a389e7ab2f/
+const express = require("express");
 const next = require("next");
 const { join } = require("path");
 

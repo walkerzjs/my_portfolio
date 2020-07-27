@@ -10,14 +10,16 @@ const background = theme("mode", {
 });
 
 const Index_ = styled.section`
-  min-height: 42.2vw;
+  /* height: 43.9vw; */
   padding-top: 5rem;
   padding-bottom: 5rem;
   background: ${background};
   transition: all 0.2s ease-out;
   opacity: 1;
+  margin-top: -2px;
 
   display: flex;
+
   @media screen and (max-width: 950px) {
     flex-direction: column;
     align-items: center;

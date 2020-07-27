@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import styled from "styled-components";
+import React, { useContext } from "react";
+import styled, { ThemeContext } from "styled-components";
 import { useSelector, useDispatch, shallowEqual } from "react-redux";
 import {
   updateValue,
@@ -7,6 +7,7 @@ import {
 } from "../../../../../../3_data/actions/contactFormActions";
 
 const Input_ = styled.input`
+  /* margin: 0 !important; */
   padding: 0 2rem;
   height: 5.8rem;
   width: 100%;
@@ -15,36 +16,73 @@ const Input_ = styled.input`
   border-radius: 5px;
   opacity: 1;
   font-size: 1.8rem;
-  border: ${(props) =>
-    props.isValid === false ? "2px solid red" : "2px solid var(--blue-2)"};
+  border: ${(props) => {
+    if (props.isValid === false) {
+      if (props.themeMode === "dark") {
+        return "2px solid var(--red)";
+      }
+      return "2px solid red";
+    } else {
+      if (props.themeMode === "dark") {
+        return "2px solid var(--white)";
+      }
+      return "2px solid var(--blue-2)";
+    }
+  }};
   &:focus {
     outline: none;
   }
 `;
 
 const TextArea_ = styled.textarea`
+  /* margin: 0 !important; */
   padding: 2rem;
   width: 100%;
+  resize: both;
+  min-width: 12rem;
   height: 19.1rem;
+  min-height: 9rem;
+  box-sizing: border-box;
   background: var(--white) 0% 0% no-repeat padding-box;
   /* border: 2px solid var(--blue-2); */
   border-radius: 5px;
   opacity: 1;
   font-size: 1.8rem;
   font-family: Noto Sans, serif;
-  border: ${(props) =>
-    props.isValid === false ? "2px solid red" : "2px solid var(--blue-2)"};
+  /* should set this, otherwise there will be space below textarea */
+  display: inline-block;
+  border: ${(props) => {
+    if (props.isValid === false) {
+      if (props.themeMode === "dark") {
+        return "2px solid var(--red)";
+      }
+      return "2px solid red";
+    } else {
+      if (props.themeMode === "dark") {
+        return "2px solid var(--white)";
+      }
+      return "2px solid var(--blue-2)";
+    }
+  }};
+
   &:focus {
-    outline: none;
+    /* outline: none; */
   }
+  /* ::-webkit-resizer {
+    border: 2px solid black;
+    background: red;
+    box-shadow: 0 0 5px 5px blue;
+    outline: 2px solid yellow;
+  } */
 `;
 
 const Input = (props) => {
-  const { type, placeholder, validationRequired, value, isValid } = useSelector(
+  let theme = useContext(ThemeContext);
+  const { type, placeholder, value, isValid } = useSelector(
     (state) => state.contactFormReducer.formConfig[props.id],
     shallowEqual
   );
-  // console.log("idValid: ", isValid);
+
   const dispatch = useDispatch();
 
   // input change
@@ -58,6 +96,7 @@ const Input = (props) => {
   if (type === "name" || type === "email") {
     input = (
       <Input_
+        themeMode={theme.mode}
         type="text"
         placeholder={placeholder}
         value={value}
@@ -71,6 +110,9 @@ const Input = (props) => {
   } else if (type === "message") {
     input = (
       <TextArea_
+        type="text"
+        name="message"
+        themeMode={theme.mode}
         placeholder={placeholder}
         value={value}
         isValid={isValid}

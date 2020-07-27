@@ -9,10 +9,10 @@ import SpinnerWhite from "../../../../2_containers/Shared/SpinnerWhite";
 const Form = styled.form`
   margin-left: 13.5vw;
   width: 28.3vw;
-  height: 49.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
+  justify-content: flex-start;
   @media screen and (max-width: 1280px) {
     width: 33vw;
   }
@@ -54,7 +54,11 @@ const Index = (props) => {
     content = <SpinnerWhite />;
   }
 
-  return <Form>{content}</Form>;
+  return (
+    <div>
+      <Form>{content}</Form>
+    </div>
+  );
 };
 
 export default Index;

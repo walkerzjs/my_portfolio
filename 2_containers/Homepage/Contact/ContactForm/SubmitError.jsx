@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 const ErrorMessage_ = styled.p`
   color: red;
-  font-size: 1.6rem;
+  font-size: 19px;
   margin: 0 auto;
   line-height: 2.1rem;
 `;

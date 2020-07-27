@@ -13,6 +13,7 @@ const Footer_ = styled.footer`
   width: 100%;
   height: 22.8vw;
 
+  margin-top: -2px;
   background: transparent url("/footer.svg") 0% 0% no-repeat padding-box;
   background-size: cover;
   opacity: 1;

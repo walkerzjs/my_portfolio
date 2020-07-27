@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -13,10 +13,13 @@ const Button_ = styled.button`
   height: 5rem;
   width: 9vw;
   margin: 0 auto;
+  box-sizing: content-box;
   border: none;
+  /* display: block; */
   color: var(--white);
   font-size: 1.9rem;
   cursor: pointer;
+
   @media screen and (max-width: 1024px) {
     width: 100px;
     /* font-size: 1.8rem; */
@@ -25,6 +28,7 @@ const Button_ = styled.button`
 `;
 
 const SubmitButton = (props) => {
+  const buttonEl = useRef(null);
   const isValid = useSelector((state) => state.contactFormReducer.isValid);
   // console.log("isValid: ", isValid);
   const dispatch = useDispatch();
@@ -40,7 +44,17 @@ const SubmitButton = (props) => {
   };
 
   return (
-    <Button_ aria-label="Submit your message" onClick={(e) => onSubmit(e)}>
+    <Button_
+      ref={buttonEl}
+      type="submit"
+      aria-label="Submit your message"
+      onClick={(e) => onSubmit(e)}
+      //Tackle a wierd bug(maybe) on Chrome to resize textarea too quickly
+      // when this button is focused.
+      onMouseOut={() => {
+        buttonEl.current.blur();
+      }}
+    >
       Submit
     </Button_>
   );
