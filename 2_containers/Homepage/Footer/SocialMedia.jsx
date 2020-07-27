@@ -22,7 +22,7 @@ const SocialMedia_ = styled.div`
     margin-right: 0;
   }
 `;
-
+//https://ionicons.com/
 const SocialMedia = (props) => {
   return (
     <SocialMedia_>

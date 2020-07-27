@@ -28,7 +28,7 @@ const SideDecor_ = styled.div`
     width: 60vw;
   }
 `;
-
+//https://pixabay.com/vectors/work-home-laptop-blogging-author-4997565/
 const SideDecor = (props) => {
   return <SideDecor_ />;
 };
