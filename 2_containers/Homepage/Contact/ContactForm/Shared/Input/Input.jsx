@@ -24,18 +24,21 @@ const Input_ = styled.input`
       return "2px solid red";
     } else {
       if (props.themeMode === "dark") {
-        return "2px solid var(--white)";
+        return "2px solid var(--grey-5)";
       }
       return "2px solid var(--blue-2)";
     }
   }};
-  &:focus {
+  transition: border 0.2s ease-out;
+  /* &:focus {
     outline: none;
-  }
+  } */
 `;
 
 const TextArea_ = styled.textarea`
   /* margin: 0 !important; */
+  position: relative;
+  z-index: 10;
   padding: 2rem;
   width: 100%;
   resize: both;
@@ -59,11 +62,12 @@ const TextArea_ = styled.textarea`
       return "2px solid red";
     } else {
       if (props.themeMode === "dark") {
-        return "2px solid var(--white)";
+        return "2px solid var(--grey-5)";
       }
       return "2px solid var(--blue-2)";
     }
   }};
+  transition: border 0.2s ease-out;
 
   &:focus {
     /* outline: none; */
