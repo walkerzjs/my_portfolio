@@ -8,9 +8,3 @@ module.exports = withPWA({
     return /\*.{spec,test}.js/.test(str);
   },
 });
-
-// module.exports = {
-//   excludeFile: (str) => {
-//     return /\*.{spec,test}.js/.test(str);
-//   },
-// };
