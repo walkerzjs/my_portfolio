@@ -10,14 +10,16 @@ const backgroundColor = theme("mode", {
 });
 
 const Footer_ = styled.footer`
-  width: 100%;
+  width: 100vw;
   height: 22.8vw;
 
   margin-top: -2px;
-  background: transparent url("/footer.svg") 0% 0% no-repeat padding-box;
-  background-size: cover;
+  background: url("/footer.svg") 0% 0% no-repeat padding-box;
+  /* background-size: contain; */
   opacity: 1;
   background-color: ${backgroundColor};
+  overflow-x: auto;
+  overflow-y: auto;
   transition: all 0.2s ease-out;
   display: flex;
   align-items: flex-end;

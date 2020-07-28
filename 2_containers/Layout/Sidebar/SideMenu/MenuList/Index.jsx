@@ -10,7 +10,7 @@ const backgroundColor = theme("mode", {
 
 const MenuList_ = styled.ul`
   list-style: none;
-  height: 100%;
+  flex: 1;
   background-color: ${backgroundColor};
   padding: 2rem;
   padding-top: 3rem;
@@ -23,6 +23,30 @@ const MenuList = (props) => {
       <MenuItem sectionId="aboutMe" sectionName="About Me" />
       <MenuItem sectionId="projects" sectionName="Projects" />
       <MenuItem sectionId="contact" sectionName="Contact" />
+      {/* <MenuItem sectionId="aboutMe" sectionName="About Me" />
+      <MenuItem sectionId="projects" sectionName="Projects" />
+      <MenuItem sectionId="contact" sectionName="Contact" />
+      <MenuItem sectionId="aboutMe" sectionName="About Me" />
+      <MenuItem sectionId="projects" sectionName="Projects" />
+      <MenuItem sectionId="contact" sectionName="Contact" />
+      <MenuItem sectionId="aboutMe" sectionName="About Me" />
+      <MenuItem sectionId="projects" sectionName="Projects" />
+      <MenuItem sectionId="contact" sectionName="Contact" />
+      <MenuItem sectionId="aboutMe" sectionName="About Me" />
+      <MenuItem sectionId="projects" sectionName="Projects" />
+      <MenuItem sectionId="contact" sectionName="Contact" />
+      <MenuItem sectionId="aboutMe" sectionName="About Me" />
+      <MenuItem sectionId="projects" sectionName="Projects" />
+      <MenuItem sectionId="contact" sectionName="Contact" />
+      <MenuItem sectionId="aboutMe" sectionName="About Me" />
+      <MenuItem sectionId="projects" sectionName="Projects" />
+      <MenuItem sectionId="contact" sectionName="Contact" />
+      <MenuItem sectionId="aboutMe" sectionName="About Me" />
+      <MenuItem sectionId="projects" sectionName="Projects" />
+      <MenuItem sectionId="contact" sectionName="Contact" />
+      <MenuItem sectionId="aboutMe" sectionName="About Me" />
+      <MenuItem sectionId="projects" sectionName="Projects" />
+      <MenuItem sectionId="contact" sectionName="Contact" /> */}
       <ThemeToggle />
     </MenuList_>
   );

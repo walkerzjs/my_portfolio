@@ -13,6 +13,6 @@ const Modal_Sidebar = (props) => {
   const onClick = () => {
     dispatch(toggleSideDrawer());
   };
-  return <Modal onClick={onClick} isOpen={isOpen} />;
+  return <Modal onClick={onClick} isOpen={isOpen} ariaLabel="Sidebar Modal" />;
 };
 export default Modal_Sidebar;

@@ -5,7 +5,7 @@ const Modal_ = styled.div`
   position: fixed;
   z-index: 1100;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
 
   left: 0;
   top: 0;
@@ -22,6 +22,12 @@ const Modal_ = styled.div`
 
 const Modal = (props) => {
   //   console.log("isOpen:", props.isOpen);
-  return <Modal_ onClick={() => props.onClick()} isOpen={props.isOpen} />;
+  return (
+    <Modal_
+      onClick={() => props.onClick()}
+      isOpen={props.isOpen}
+      aria-label={props.ariaLabel}
+    />
+  );
 };
 export default Modal;
