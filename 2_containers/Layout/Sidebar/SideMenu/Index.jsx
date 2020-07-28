@@ -12,7 +12,7 @@ const SideMenu_ = styled.div`
   /* the next two lines are from https://portfolio.smakosh.com */
   overflow-x: auto;
   overflow-y: auto;
-
+  height: 100vh;
   width: 250px;
   max-width: 100vw;
 
