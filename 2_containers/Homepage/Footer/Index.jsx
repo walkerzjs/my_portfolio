@@ -15,8 +15,8 @@ const Footer_ = styled.footer`
 
   margin-top: -2px;
   background: url("/footer.svg") 0% 0% no-repeat padding-box;
-  /* background-size: contain; */
-  opacity: 1;
+  background-size: cover;
+  /* opacity: 1; */
   background-color: ${backgroundColor};
   overflow-x: auto;
   overflow-y: auto;
@@ -31,7 +31,11 @@ const Footer_ = styled.footer`
     justify-content: flex-end;
     height: 200px;
     padding-bottom: 2rem;
+    /* background-image: url("/footerSmall.svg"); */
   }
+  /* @media screen and (max-width: 180px) {
+    height: 230px;
+  } */
 `;
 
 const Footer = (props) => {
