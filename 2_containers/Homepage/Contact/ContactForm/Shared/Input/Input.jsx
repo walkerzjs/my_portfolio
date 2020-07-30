@@ -7,12 +7,10 @@ import {
 } from "../../../../../../3_data/actions/contactFormActions";
 
 const Input_ = styled.input`
-  /* margin: 0 !important; */
   padding: 0 2rem;
   height: 5.8rem;
   width: 100%;
   background: var(--white) 0% 0% no-repeat padding-box;
-  /* border: 2px solid var(--blue-2); */
   border-radius: 5px;
   opacity: 1;
   font-size: 1.8rem;
@@ -30,13 +28,9 @@ const Input_ = styled.input`
     }
   }};
   transition: border 0.2s ease-out;
-  /* &:focus {
-    outline: none;
-  } */
 `;
 
 const TextArea_ = styled.textarea`
-  /* margin: 0 !important; */
   position: relative;
   z-index: 10;
   padding: 2rem;
@@ -47,7 +41,6 @@ const TextArea_ = styled.textarea`
   min-height: 9rem;
   box-sizing: border-box;
   background: var(--white) 0% 0% no-repeat padding-box;
-  /* border: 2px solid var(--blue-2); */
   border-radius: 5px;
   opacity: 1;
   font-size: 1.8rem;
@@ -68,16 +61,6 @@ const TextArea_ = styled.textarea`
     }
   }};
   transition: border 0.2s ease-out;
-
-  &:focus {
-    /* outline: none; */
-  }
-  /* ::-webkit-resizer {
-    border: 2px solid black;
-    background: red;
-    box-shadow: 0 0 5px 5px blue;
-    outline: 2px solid yellow;
-  } */
 `;
 
 const Input = (props) => {

@@ -1,23 +1,13 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useContext } from "react";
+import styled, { ThemeContext } from "styled-components";
 import Notes from "./Notes";
 import SocialMedia from "./SocialMedia";
-import theme from "styled-theming";
-
-const backgroundColor = theme("mode", {
-  light: "#f9f9f9",
-  dark: "var(--grey-5)",
-});
 
 const Footer_ = styled.footer`
   width: 100vw;
   height: 22.8vw;
-
-  margin-top: -2px;
   background: url("/footer.svg") 0% 0% no-repeat padding-box;
   background-size: cover;
-  /* opacity: 1; */
-  background-color: ${backgroundColor};
   overflow-x: auto;
   overflow-y: auto;
   transition: all 0.2s ease-out;
@@ -31,16 +21,13 @@ const Footer_ = styled.footer`
     justify-content: flex-end;
     height: 200px;
     padding-bottom: 2rem;
-    /* background-image: url("/footerSmall.svg"); */
   }
-  /* @media screen and (max-width: 180px) {
-    height: 230px;
-  } */
 `;
 
 const Footer = (props) => {
+  const theme = useContext(ThemeContext);
   return (
-    <Footer_>
+    <Footer_ mode={theme.mode}>
       <Notes />
       <SocialMedia />
     </Footer_>
