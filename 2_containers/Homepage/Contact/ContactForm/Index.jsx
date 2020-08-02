@@ -42,6 +42,7 @@ const Index = (props) => {
     (state) => state.contactFormReducer.submitting
   );
   // isSubmitting = true;
+  let submitSpinner = Theme.mode === "light" ? <Spinner /> : <SpinnerWhite />;
   let content = (
     <>
       <SubmitError />
@@ -49,20 +50,20 @@ const Index = (props) => {
       <Input key={keys[1]} id={keys[1]} />
       <Input key={keys[2]} id={keys[2]} />
       <Captcha />
-      <SubmitButton />
+      {isSubmitting === true ? submitSpinner : <SubmitButton />}
     </>
   );
-  if (isSubmitting && Theme.mode === "light") {
-    content = <Spinner />;
-  }
-  if (isSubmitting && Theme.mode === "dark") {
-    content = <SpinnerWhite />;
-  }
+  // if (isSubmitting && Theme.mode === "light") {
+  //   content = <Spinner />;
+  // }
+  // if (isSubmitting && Theme.mode === "dark") {
+  //   content = <SpinnerWhite />;
+  // }
 
   return (
-    <div>
-      <Form>{content}</Form>
-    </div>
+    // <div>
+    <Form>{content}</Form>
+    // </div>
   );
 };
 

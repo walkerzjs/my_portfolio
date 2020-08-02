@@ -11,10 +11,10 @@ const Index = (props) => {
   let content = null;
   if (isFormValid === true) {
     content = (
-      <div aria-label="Google ReCAPTCHA">
+      <Index_ aria-label="Google ReCAPTCHA">
         <ReCaptcha />
         <RobotErrorMessage />
-      </div>
+      </Index_>
     );
   }
 

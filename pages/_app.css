@@ -10,6 +10,8 @@
 }
 html {
   font-size: 62.5%;
+  /* Remove 300ms delay on mobile browsers */
+  touch-action: manipulation;
 }
 
 @media screen and (max-width: 1450px) {

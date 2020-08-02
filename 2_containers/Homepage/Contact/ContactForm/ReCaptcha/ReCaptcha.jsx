@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { siteKey } from "../../../../Shared/ReCaptcha";
 import { robotCheck } from "../../../../../3_data/actions/contactFormActions";
 
@@ -10,6 +10,13 @@ const Captcha = (props) => {
   const onChange = async (token) => {
     await dispatch(robotCheck(token));
   };
+
+  const submitSuccess = useSelector(
+    (state) => state.contactFormReducer.submitSuccess
+  );
+  if (submitSuccess === true) {
+    recaptchaRef.current.reset();
+  }
   return (
     <ReCAPTCHA
       ref={recaptchaRef}

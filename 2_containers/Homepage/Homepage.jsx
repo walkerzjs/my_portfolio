@@ -5,11 +5,20 @@ import AboutMe from "./AboutMe/AboutMe";
 import Projects from "./Projects/Projects";
 import Contact from "./Contact/Index";
 import Footer from "./Footer/Index";
+import theme from "styled-theming";
+
+const backgroundColor = theme("mode", {
+  light: "#eeeeee",
+  dark: "var(--grey-5)",
+});
+
 const HomePage_ = styled.div`
   /* position: relative; */
-  background-color: ${(props) =>
-    props.mode === "light" ? "#eeeeee" : "var(--grey-5)"};
-  transition: background-color 0.2s ease-out;
+  transition: all 0.2s;
+  -webkit-transition: all 200ms;
+  background-color: ${backgroundColor};
+  width: 100vw;
+  overflow: hidden;
 `;
 
 const HomePage = (props) => {

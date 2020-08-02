@@ -8,7 +8,6 @@ import Head from "next/head";
 import Router from "next/router";
 import * as gtag from "../2_containers/Shared/gtag";
 import { ThemeProvider } from "styled-components";
-
 export default function App({ Component, pageProps }) {
   const [theme, setTheme] = useState({ mode: "light" });
 
@@ -41,6 +40,12 @@ export default function App({ Component, pageProps }) {
           content="Portfolio for Junshuai Zhang (Jacob)"
         />
         <meta name="theme-color" content="#ffffff" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+        />
+
+        {/* <meta name="viewport" content="width=device-width" /> */}
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link

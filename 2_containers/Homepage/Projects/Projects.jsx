@@ -17,7 +17,7 @@ const Projects_ = styled.section`
   /* background: ${background}; */
   opacity: 1;
   transition: all 0.2s ease-out;
-  margin-top: -2px;
+  /* margin-top: -2px; */
 `;
 
 const Projects = (props) => {

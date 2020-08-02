@@ -6,7 +6,7 @@ const SideDecor_ = styled.div`
   /* top: 795px; */
   /* top: 35%; */
   margin-right: 18vw;
-  margin-top: -2vw;
+  /* margin-top: -2vw; */
   width: 21.5vw;
   height: 21.5vw;
   background: transparent url("/aboutMeDecor.svg") 0% 0% no-repeat padding-box;

@@ -10,15 +10,13 @@ import SideDecor from "./SideDecor";
 // });
 
 const Index_ = styled.section`
-  /* height: 43.9vw; */
   padding-top: 5rem;
   padding-bottom: 5rem;
-  /* background: ${background}; */
   transition: all 0.2s ease-out;
   opacity: 1;
-  margin-top: -2px;
-
   display: flex;
+  width: 100%;
+  /* margin: 0 auto; */
 
   @media screen and (max-width: 950px) {
     flex-direction: column;

@@ -4,7 +4,7 @@ import styled from "styled-components";
 const SideDecor_ = styled.img`
   margin-left: 15.2vw;
   margin-top: 3rem;
-  display: inline-block;
+  display: block;
   width: 26.4vw;
   height: 19.6vw;
 
