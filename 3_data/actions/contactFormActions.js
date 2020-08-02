@@ -99,9 +99,12 @@ export const submit = () => {
 export const robotCheck = (token) => {
   return (dispatch) => {
     dispatch({ type: actionTypes.ROBOT_CHECKING_START });
+    const url =
+      process.env.NODE_ENV === "production"
+        ? `https://my-portfoliojsz.com/api/validateReCaptcha?token=${token}`
+        : `http://localhost:3000/api/validateReCaptcha?token=${token}`;
     axios
-      .get(`https://my-portfoliojsz.com/api/validateReCaptcha?token=${token}`)
-      // .get(`http://localhost:3000/api/validateReCaptcha?token=${token}`)
+      .get(url)
       .then((response) => {
         if (response.data.success === true) {
           dispatch({ type: actionTypes.ROBOT_CHECKING_SUCCESS });

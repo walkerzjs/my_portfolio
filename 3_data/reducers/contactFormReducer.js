@@ -89,12 +89,14 @@ const contactFormReducer = (state = initialState, action) => {
       state.submitSuccessMessage = "Submitted the message";
       state.submitError = false;
       state.submitErrorMessage = "";
+      state.isRobot = undefined;
       return { ...state };
     case actionTypes.SUBMIT_FAILED:
       state.submitting = false;
       state.submitSuccess = false;
       state.submitError = true;
       state.submitErrorMessage = action.error;
+      state.isRobot = undefined;
       return { ...state };
 
     case actionTypes.ROBOT_CHECKING_START:
