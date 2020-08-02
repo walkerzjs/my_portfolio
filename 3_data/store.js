@@ -9,10 +9,12 @@ let store;
 
 const initialState = {};
 
-const devTools =
-  process.env.NODE_ENV === "production"
-    ? applyMiddleware(thunk)
-    : composeWithDevTools(applyMiddleware(thunk));
+// const devTools =
+//   process.env.NODE_ENV === "production"
+//     ? applyMiddleware(thunk)
+//     : composeWithDevTools(applyMiddleware(thunk));
+
+const devTools = composeWithDevTools(applyMiddleware(thunk));
 
 function initStore(preloadedState = initialState) {
   return createStore(reducer, preloadedState, devTools);

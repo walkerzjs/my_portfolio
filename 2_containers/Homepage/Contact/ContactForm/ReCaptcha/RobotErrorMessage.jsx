@@ -29,29 +29,35 @@ const PlaceHolder_ = styled.p`
 `;
 
 const RobotErrorMessage = (props) => {
-  const areEqual = (cur, prev) => {
-    if (prev.isRobot !== cur.isRobot) {
-      return false;
-    }
-    if (prev.robotErrorMessage !== cur.robotErrorMessage) {
-      return false;
-    }
-    if (prev.robotCheckingError !== cur.robotCheckingError) {
-      return false;
-    }
-    return true;
-  };
-  const { isRobot, robotErrorMessage, robotCheckingError } = useSelector(
-    (state) => state.contactFormReducer,
-    areEqual
+  // const areEqual = (cur, prev) => {
+  //   console.log("are qual robot: ", cur, prev);
+  //   if (prev.isRobot !== cur.isRobot) {
+  //     return false;
+  //   }
+  //   if (prev.robotErrorMessage !== cur.robotErrorMessage) {
+  //     return false;
+  //   }
+  //   if (prev.robotCheckingError !== cur.robotCheckingError) {
+  //     return false;
+  //   }
+  //   return true;
+  // };
+  const isRobot = useSelector((state) => state.contactFormReducer.isRobot);
+  const robotCheckingError = useSelector(
+    (state) => state.contactFormReducer.robotCheckingError
   );
-  if (isRobot !== true && robotCheckingError !== true) {
-    return (
-      <PlaceHolder_ aria-label="Placeholder for error message, no use for now."></PlaceHolder_>
-    );
-  } else {
-    return <RobotErrorMessage_>{robotErrorMessage}</RobotErrorMessage_>;
+  const robotErrorMessage = useSelector(
+    (state) => state.contactFormReducer.robotErrorMessage
+  );
+  // console.log("update robot error message: ", isRobot, robotCheckingError);
+  let content = (
+    <PlaceHolder_ aria-label="Placeholder for error message, no use for now."></PlaceHolder_>
+  );
+
+  if (isRobot === true || robotCheckingError === true) {
+    content = <RobotErrorMessage_>{robotErrorMessage}</RobotErrorMessage_>;
   }
+  return content;
 };
 
 export default RobotErrorMessage;

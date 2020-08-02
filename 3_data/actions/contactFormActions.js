@@ -1,7 +1,6 @@
 import * as actionTypes from "./actionTypes";
-import axiosBase, { axiosReCaptcha } from "../axiosBase";
+import axiosBase from "../axiosBase";
 import axios from "axios";
-import { secretKey } from "../../2_containers/Shared/ReCaptcha";
 export const updateValue = (key, value) => {
   return { type: actionTypes.UPDATE_VALUE, key: key, value: value };
 };
@@ -99,13 +98,10 @@ export const submit = () => {
 
 export const robotCheck = (token) => {
   return (dispatch) => {
-    const requestObject = {
-      secret: secretKey,
-      response: token,
-    };
     dispatch({ type: actionTypes.ROBOT_CHECKING_START });
     axios
       .get(`https://my-portfoliojsz.com/api/validateReCaptcha?token=${token}`)
+      // .get(`http://localhost:3000/api/validateReCaptcha?token=${token}`)
       .then((response) => {
         if (response.data.success === true) {
           dispatch({ type: actionTypes.ROBOT_CHECKING_SUCCESS });

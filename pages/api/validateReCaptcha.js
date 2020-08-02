@@ -7,7 +7,11 @@ const cors = initMiddleware(
   Cors({
     // Only allow requests with GET, POST and OPTIONS
     methods: ["GET", "POST", "OPTIONS"],
-    origin: ["https://my-portfoliojsz.com", "http://localhost"],
+    origin: [
+      "https://my-portfoliojsz.com",
+      "http://localhost:3000",
+      "http://localhost",
+    ],
   })
 );
 
@@ -17,6 +21,7 @@ export default async (req, res) => {
     secret: secretKey,
     response: req.query.token,
   };
+  // console.log("req obj: ", requestObject);
 
   axios({
     method: "post",
