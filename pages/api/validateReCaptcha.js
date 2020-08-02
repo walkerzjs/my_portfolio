@@ -1,8 +1,18 @@
-import { request } from "express";
+import Cors from "cors";
+import initMiddleware from "../../Shared/initMiddleWare";
 import { secretKey } from "../../2_containers/Shared/ReCaptcha";
 const axios = require("axios");
+const cors = initMiddleware(
+  // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
+  Cors({
+    // Only allow requests with GET, POST and OPTIONS
+    methods: ["GET", "POST", "OPTIONS"],
+    origin: ["https://my-portfoliojsz.com", "http://localhost"],
+  })
+);
 
-export default (req, res) => {
+export default async (req, res) => {
+  await cors(req, res);
   const requestObject = {
     secret: secretKey,
     response: req.query.token,
@@ -19,11 +29,7 @@ export default (req, res) => {
     .then((response) => {
       if (response.data.success === true) {
         res.statusCode = 200;
-        res.end(
-          JSON.stringify({
-            success: true,
-          })
-        );
+        res.json({ success: true });
       } else {
         res.statusCode = 200;
         res.end(

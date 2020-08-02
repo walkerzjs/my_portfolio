@@ -105,8 +105,7 @@ export const robotCheck = (token) => {
     };
     dispatch({ type: actionTypes.ROBOT_CHECKING_START });
     axios
-      // .post("https://www.google.com/recaptcha/api/siteverify", requestObject)
-      .get(`http://localhost:3000/api/validateReCaptcha?token=${token}`)
+      .get(`https://my-portfoliojsz.com/api/validateReCaptcha?token=${token}`)
       .then((response) => {
         if (response.data.success === true) {
           dispatch({ type: actionTypes.ROBOT_CHECKING_SUCCESS });
