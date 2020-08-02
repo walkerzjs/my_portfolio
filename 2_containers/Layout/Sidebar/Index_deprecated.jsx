@@ -8,7 +8,7 @@ const Sidebar_ = styled.div``;
 
 const Sidebar = (props) => {
   // const isOpen = useSelector((state) => state.sidebarReducer.isOpen);
-  console.log(
+  console.error(
     "This integration is not used, use sideMenu as sidebar and modal sepeartely instead."
   );
   return (

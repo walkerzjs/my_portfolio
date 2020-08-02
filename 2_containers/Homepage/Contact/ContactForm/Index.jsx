@@ -6,11 +6,14 @@ import SubmitError from "./SubmitError";
 import { useSelector, shallowEqual } from "react-redux";
 import Spinner from "../../../../2_containers/Shared/Spinner";
 import SpinnerWhite from "../../../../2_containers/Shared/SpinnerWhite";
+import Captcha from "./ReCaptcha/Index.jsx";
+
 const Form = styled.form`
   margin-left: 13.5vw;
   width: 28.3vw;
   display: flex;
   flex-direction: column;
+  /* min-height: 700px; */
 
   justify-content: flex-start;
   @media screen and (max-width: 1280px) {
@@ -35,15 +38,17 @@ const Index = (props) => {
       Object.keys(state.contactFormReducer.formConfig).sort((a, b) => a - b),
     shallowEqual
   );
-  const isSubmitting = useSelector(
+  let isSubmitting = useSelector(
     (state) => state.contactFormReducer.submitting
   );
+  // isSubmitting = true;
   let content = (
     <>
       <SubmitError />
       <Input key={keys[0]} id={keys[0]} />
       <Input key={keys[1]} id={keys[1]} />
       <Input key={keys[2]} id={keys[2]} />
+      <Captcha />
       <SubmitButton />
     </>
   );

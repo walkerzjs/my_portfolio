@@ -2,6 +2,12 @@ import * as actionTypes from "../actions/actionTypes";
 const initialState = {
   isValid: undefined,
 
+  isRobot: undefined,
+  robotChecking: false,
+  robotCheckingSuccess: false,
+  robotCheckingError: false,
+  robotCheckingErrorMessage: "",
+
   submitting: false,
   submitSuccess: false,
   submitSuccessMessage: "",
@@ -53,7 +59,6 @@ const contactFormReducer = (state = initialState, action) => {
       state.formConfig[action.key] = { ...config };
       return { ...state };
     case actionTypes.VALIDATING:
-      //   console.log("validate reducer");
       config = { ...state.formConfig[action.key] };
       config.isValid = action.isValid;
       config.validationErrorMessage = action.validationErrorMessage;
@@ -73,20 +78,46 @@ const contactFormReducer = (state = initialState, action) => {
 
     case actionTypes.SUBMIT_START:
       state.submitting = true;
+      state.submitSuccess = false;
       state.submitSuccessMessage = "";
       state.submitError = false;
       state.submitErrorMessage = "";
       return { ...state };
     case actionTypes.SUBMIT_SUCCESS:
       state.submitting = false;
+      state.submitSuccess = true;
       state.submitSuccessMessage = "Submitted the message";
       state.submitError = false;
       state.submitErrorMessage = "";
       return { ...state };
     case actionTypes.SUBMIT_FAILED:
       state.submitting = false;
+      state.submitSuccess = false;
       state.submitError = true;
       state.submitErrorMessage = action.error;
+      return { ...state };
+
+    case actionTypes.ROBOT_CHECKING_START:
+      state.robotChecking = true;
+      state.robotCheckingSuccess = false;
+      state.robotErrorMessage = "";
+      state.robotCheckingError = false;
+      return { ...state };
+
+    case actionTypes.ROBOT_CHECKING_SUCCESS:
+      state.robotChecking = false;
+      state.robotCheckingSuccess = true;
+      state.robotErrorMessage = "";
+      state.robotCheckingError = false;
+      state.isRobot = false;
+      return { ...state };
+
+    case actionTypes.ROBOT_CHECKING_FAILED:
+      state.robotChecking = false;
+      state.robotCheckingSuccess = false;
+      state.robotErrorMessage = action.error;
+      state.robotCheckingError = true;
+      state.isRobot = action.isRobot;
       return { ...state };
 
     default:

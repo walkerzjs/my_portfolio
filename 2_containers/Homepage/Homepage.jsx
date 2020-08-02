@@ -8,7 +8,7 @@ import Footer from "./Footer/Index";
 const HomePage_ = styled.div`
   /* position: relative; */
   background-color: ${(props) =>
-    props.mode === "light" ? "#f9f9f9" : "var(--grey-5)"};
+    props.mode === "light" ? "#eeeeee" : "var(--grey-5)"};
   transition: background-color 0.2s ease-out;
 `;
 

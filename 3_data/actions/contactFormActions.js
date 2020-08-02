@@ -1,14 +1,12 @@
 import * as actionTypes from "./actionTypes";
-import axios from "../axiosBase";
-
+import axiosBase, { axiosReCaptcha } from "../axiosBase";
+import axios from "axios";
+import { secretKey } from "../../2_containers/Shared/ReCaptcha";
 export const updateValue = (key, value) => {
-  //   console.log("dispatch update value");
   return { type: actionTypes.UPDATE_VALUE, key: key, value: value };
 };
 
 export const validating = (key, type, value) => {
-  //   console.log("key: ", key, type, value);
-
   switch (type) {
     case "name":
       if (value === "" || value === null) {
@@ -60,19 +58,14 @@ export const validating = (key, type, value) => {
 };
 
 export const submitCheck = () => {
-  //   console.log("submitCheck");
   return (dispatch, getState) => {
-    // console.log("getting state: ", getState());
-
     const config = getState().contactFormReducer.formConfig;
     const valueList = Object.keys(config).map((key) => [
       key,
       config[key].type,
       config[key].value,
     ]);
-    // console.log(valueList);
     valueList.forEach((item) => {
-      //   console.log(item);
       dispatch(validating(...item));
     });
   };
@@ -92,17 +85,45 @@ export const submit = () => {
     formValues.forEach((item) => {
       formValuesObject[item.type] = item[item.type];
     });
-    // console.log("formvalues: ", formValuesObject);
     dispatch({ type: actionTypes.SUBMIT_START });
-    axios
+    axiosBase
       .post("messages.json", formValuesObject)
       .then((response) => {
-        // console.log(("response: ", response));
         dispatch({ type: actionTypes.SUBMIT_SUCCESS });
       })
       .catch((error) => {
-        // console.log("error: ", error.message);
         dispatch({ type: actionTypes.SUBMIT_FAILED, error: error.message });
+      });
+  };
+};
+
+export const robotCheck = (token) => {
+  return (dispatch) => {
+    const requestObject = {
+      secret: secretKey,
+      response: token,
+    };
+    dispatch({ type: actionTypes.ROBOT_CHECKING_START });
+    axios
+      // .post("https://www.google.com/recaptcha/api/siteverify", requestObject)
+      .get(`http://localhost:3000/api/validateReCaptcha?token=${token}`)
+      .then((response) => {
+        if (response.data.success === true) {
+          dispatch({ type: actionTypes.ROBOT_CHECKING_SUCCESS });
+        } else {
+          dispatch({
+            type: actionTypes.ROBOT_CHECKING_FAILED,
+            isRobot: true,
+            error: response.data["error-codes"],
+          });
+        }
+      })
+      .catch((error) => {
+        dispatch({
+          type: actionTypes.ROBOT_CHECKING_FAILED,
+          isRobot: undefined,
+          error: error.message,
+        });
       });
   };
 };

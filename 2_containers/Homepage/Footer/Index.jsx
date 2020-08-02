@@ -4,7 +4,7 @@ import Notes from "./Notes";
 import SocialMedia from "./SocialMedia";
 
 const Footer_ = styled.footer`
-  width: 100vw;
+  width: 100%;
   height: 22.8vw;
   background: url("/footer.svg") 0% 0% no-repeat padding-box;
   background-size: cover;

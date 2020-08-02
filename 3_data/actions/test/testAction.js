@@ -27,11 +27,9 @@ export function fetchTodos() {
     dispatch(fetchTodosRequest());
     return fetch("https://jsonplaceholder.typicode.com/todos/1")
       .then((res) => {
-        // console.log("response: ", res.json());
         return res.json();
       })
       .then((body) => {
-        console.log("body: ", body);
         return dispatch(fetchTodosSuccess(body));
       })
       .catch((ex) => dispatch(fetchTodosFailure(ex)));

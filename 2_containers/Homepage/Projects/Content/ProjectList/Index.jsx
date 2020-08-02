@@ -53,7 +53,6 @@ const ProjectList = (props) => {
     (state) => Object.keys(state.projectsReducer),
     shallowEqual
   );
-  //   console.log(projectData);
   const projects = projectData.map((id) => {
     return (
       <li key={id}>
@@ -61,7 +60,6 @@ const ProjectList = (props) => {
       </li>
     );
   });
-  //   console.log(projects);
 
   return <ProjectList_>{projects}</ProjectList_>;
 };

@@ -29,14 +29,21 @@ const Button_ = styled.button`
 
 const SubmitButton = (props) => {
   const buttonEl = useRef(null);
-  const isValid = useSelector((state) => state.contactFormReducer.isValid);
-  // console.log("isValid: ", isValid);
+  const onMouseOut = () => {
+    buttonEl.current.blur();
+  };
+  const isEqual = (prev, cur) => {
+    return prev.isValid === cur.isValid && prev.isRobot === cur.isRobot;
+  };
+  const { isValid, isRobot } = useSelector(
+    (state) => state.contactFormReducer,
+    isEqual
+  );
   const dispatch = useDispatch();
 
   const onSubmit = (e) => {
     e.preventDefault();
-    // console.log("e: ", e);
-    if (isValid) {
+    if (isValid === true && isRobot === false) {
       dispatch(submit());
     } else {
       dispatch(submitCheck());
@@ -48,12 +55,10 @@ const SubmitButton = (props) => {
       ref={buttonEl}
       type="submit"
       aria-label="Submit your message"
-      onClick={(e) => onSubmit(e)}
+      onClick={onSubmit}
       //Tackle a wierd bug(maybe) on Chrome to resize textarea too quickly
       // when this button is focused.
-      onMouseOut={() => {
-        buttonEl.current.blur();
-      }}
+      onMouseOut={onMouseOut}
     >
       Submit
     </Button_>

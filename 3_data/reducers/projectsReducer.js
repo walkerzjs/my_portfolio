@@ -15,6 +15,7 @@ const initialState = {
         href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/"
         key="courseReference"
         target="_blank"
+        rel="noopener noreferrer"
       >
         React-The Complete Guide
       </a>,

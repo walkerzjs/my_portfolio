@@ -10,9 +10,7 @@ const ErrorMessage_ = styled.p`
 `;
 
 const SubmitError = (props) => {
-  //   console.log("error");
   const areEqual = (cur, prev) => {
-    // console.log("prev: ", prev, "cur:", cur);
     if (prev.submitError !== cur.submitError) {
       return false;
     }
