@@ -14,7 +14,7 @@ const Hero_ = styled.section`
   display: flex;
   justify-content: space-between;
   opacity: 1;
-  @media screen and (max-width: 950px) {
+  @media (max-width: 950px) {
     height: 710px;
 
     flex-direction: column;

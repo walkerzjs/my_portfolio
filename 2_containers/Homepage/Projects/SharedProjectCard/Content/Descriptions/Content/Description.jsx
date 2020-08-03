@@ -19,10 +19,10 @@ const Description_ = styled.p`
     color: ${textColor};
     transition: all 0.2s ease-out;
   }
-  @media screen and (max-width: 280px) {
+  @media (max-width: 280px) {
     font-size: 1.5rem;
   }
-  @media screen and (max-width: 170px) {
+  @media (max-width: 170px) {
     font-size: 1.2rem;
   }
 `;

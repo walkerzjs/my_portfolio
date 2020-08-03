@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const NameLogo_ = styled.ul`
   margin-left: 9.3vw;
-  @media screen and (max-width: 672px) {
+  @media (max-width: 672px) {
     margin-left: 2rem;
   }
 `;

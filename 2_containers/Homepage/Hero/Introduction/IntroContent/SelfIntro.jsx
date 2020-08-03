@@ -4,10 +4,10 @@ import styled from "styled-components";
 const SelfIntro_ = styled.p`
   font-size: 2rem;
   margin-top: 5rem;
-  @media screen and (max-width: 1136px) {
+  @media (max-width: 1136px) {
     margin-top: 3rem;
   }
-  @media screen and (max-width: 320px) {
+  @media (max-width: 320px) {
     margin-top: 4rem;
   }
 `;

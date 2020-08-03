@@ -21,12 +21,12 @@ const AboutMe_ = styled.section`
   transition: all 0.2s ease-out;
   opacity: 1;
 
-  @media screen and (max-width: 1023px) {
+  @media  (max-width: 1023px) {
     height: 600px;
     margin-top: -200px;
     padding-top: 280px;
   }
-  @media screen and (max-width: 950px) {
+  @media  (max-width: 950px) {
     height: auto;
     min-height: 800px;
     flex-direction: column;

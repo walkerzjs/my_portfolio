@@ -20,18 +20,18 @@ const SharedProjectCard_ = styled.div`
   opacity: 1;
   transition: all 0.2s ease-out;
 
-  @media screen and (max-width: 1280px) {
+  @media (max-width: 1280px) {
     height: 35vw;
   }
-  @media screen and (max-width: 1024px) {
+  @media (max-width: 1024px) {
     height: 38vw;
   }
-  @media screen and (max-width: 896px) {
+  @media (max-width: 896px) {
     height: 40.7rem;
 
     /* grid-template-rows:  */
   }
-  @media screen and (max-width: 280px) {
+  @media (max-width: 280px) {
     height: auto;
   }
 `;

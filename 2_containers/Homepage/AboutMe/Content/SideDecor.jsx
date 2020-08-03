@@ -13,17 +13,17 @@ const SideDecor_ = styled.div`
   opacity: 1;
   background-size: contain;
 
-  @media screen and (max-width: 950px) {
+  @media (max-width: 950px) {
     margin-right: 0;
     margin-top: 50px;
     height: 300px;
     width: 300px;
   }
-  @media screen and (max-width: 496px) {
+  @media (max-width: 496px) {
     height: 250px;
     width: 250px;
   }
-  @media screen and (max-width: 334px) {
+  @media (max-width: 334px) {
     height: 60vw;
     width: 60vw;
   }

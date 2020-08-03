@@ -4,13 +4,14 @@ import styled, { ThemeContext } from "styled-components";
 // https://www.w3schools.com/howto/howto_css_switch.asp
 const ThemeToggleC = styled.label`
   /* The switch - the box around the slider */
-
+  -webkit-tap-highlight-color: transparent;
   position: relative;
   display: block;
   margin-left: 10%;
   margin-top: 15px;
   width: 60px;
   height: 30px;
+  /* background-color: transparent; */
   /* margin-left: 40vw; */
 
   /* The slider the rounded rectangle*/
@@ -23,8 +24,8 @@ const ThemeToggleC = styled.label`
     bottom: 0;
     /* background-color: #ccc; */
     background-color: var(--grey-3);
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+    -webkit-transition: 0.2s ease-out;
+    transition: 0.2s ease-out;
   }
 
   .slider:before {
@@ -35,8 +36,8 @@ const ThemeToggleC = styled.label`
     left: 4px;
     bottom: 3px;
     background-color: white;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+    -webkit-transition: 0.2s ease-out;
+    transition: 0.2s ease-out;
   }
 
   /* Rounded sliders */

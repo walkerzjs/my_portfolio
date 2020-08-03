@@ -7,9 +7,11 @@ const ThemeToggleC = styled.li`
   /* The switch - the box around the slider */
   label {
     position: relative;
+    -webkit-tap-highlight-color: transparent;
     display: inline-block;
     width: 60px;
     height: 30px;
+    background-color: transparent;
   }
 
   /* margin-left: 40vw; */
@@ -24,8 +26,8 @@ const ThemeToggleC = styled.li`
     bottom: 0;
     /* background-color: #ccc; */
     background-color: var(--grey-5);
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
   }
 
   .slider:before {
@@ -36,8 +38,8 @@ const ThemeToggleC = styled.li`
     left: 4px;
     bottom: 3px;
     background-color: white;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
   }
 
   /* Rounded sliders */

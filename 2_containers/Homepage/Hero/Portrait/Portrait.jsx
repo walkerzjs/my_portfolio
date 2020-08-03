@@ -12,18 +12,18 @@ const Portrait_ = styled.div`
   background: transparent url("/portrait.svg") 0% 0% no-repeat padding-box;
   background-size: cover;
   opacity: 1;
-  @media screen and (max-width: 950px) {
+  @media (max-width: 950px) {
     width: 350px;
     height: 175px;
     margin-top: 70px;
     margin-right: 0vw;
   }
-  @media screen and (max-width: 546px) {
+  @media (max-width: 546px) {
     width: 70vw;
     height: 35vw;
     /* min-height: 150px; */
   }
-  @media screen and (max-width: 228px) {
+  @media (max-width: 228px) {
     width: 90vw;
     height: 45vw;
   }

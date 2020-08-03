@@ -8,18 +8,18 @@ const SideDecor_ = styled.img`
   width: 26.4vw;
   height: 19.6vw;
 
-  @media screen and (max-width: 1280px) {
+  @media (max-width: 1280px) {
     margin-left: 11.2vw;
   }
-  @media screen and (max-width: 950px) {
+  @media (max-width: 950px) {
     margin-left: 0;
     width: 45vw;
     height: 60vw;
   }
-  @media screen and (max-width: 534px) {
+  @media (max-width: 534px) {
     width: 55vw;
   }
-  @media screen and (max-width: 412px) {
+  @media (max-width: 412px) {
     width: 65vw;
   }
 `;

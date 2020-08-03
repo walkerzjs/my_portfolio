@@ -23,7 +23,7 @@ const Proposal_ = styled.button`
     justify-content: center;
   }
 
-  @media screen and (max-width: 320px) {
+  @media (max-width: 320px) {
     width: 80%;
     font-size: 1.7rem;
     margin-left: auto;

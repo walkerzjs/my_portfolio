@@ -19,15 +19,15 @@ const DetailedIntro_ = styled.article`
     font-size: 2.2rem;
     margin-bottom: 3rem;
 
-    @media screen and (max-width: 1280px) {
+    @media (max-width: 1280px) {
       font-size: 2rem;
     }
-    @media screen and (max-width: 180px) {
+    @media (max-width: 180px) {
       font-size: 1.7rem;
     }
   }
 
-  @media screen and (max-width: 950px) {
+  @media (max-width: 950px) {
     margin-left: 0;
     width: 60vw;
   }

@@ -17,7 +17,7 @@ const HomePage_ = styled.div`
   transition: all 0.2s;
   -webkit-transition: all 200ms;
   background-color: ${backgroundColor};
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
 `;
 

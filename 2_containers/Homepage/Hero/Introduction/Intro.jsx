@@ -9,13 +9,13 @@ const Intro_ = styled.div`
   width: 30.5vw;
   margin-top: 9vw;
   margin-left: 16.5vw;
-  @media screen and (max-width: 1136px) {
+  @media (max-width: 1136px) {
     margin-top: 8vw;
   }
-  @media screen and (max-width: 1023px) {
+  @media (max-width: 1023px) {
     margin-top: 7vw;
   }
-  @media screen and (max-width: 950px) {
+  @media (max-width: 950px) {
     width: 70vw;
     margin-left: 0;
     height: auto;
@@ -24,7 +24,7 @@ const Intro_ = styled.div`
     flex-direction: column;
     align-items: center; */
   }
-  @media screen and (max-width: 546px) {
+  @media (max-width: 546px) {
     margin-top: 80px;
   }
 `;

@@ -16,17 +16,17 @@ const Form = styled.form`
   /* min-height: 700px; */
 
   justify-content: flex-start;
-  @media screen and (max-width: 1280px) {
+  @media (max-width: 1280px) {
     width: 33vw;
   }
-  @media screen and (max-width: 950px) {
+  @media (max-width: 950px) {
     margin-left: 0;
     width: 60vw;
   }
-  @media screen and (max-width: 534px) {
+  @media (max-width: 534px) {
     width: 70vw;
   }
-  @media screen and (max-width: 412px) {
+  @media (max-width: 412px) {
     width: 90vw;
   }
 `;
@@ -49,6 +49,7 @@ const Index = (props) => {
       <Input key={keys[0]} id={keys[0]} />
       <Input key={keys[1]} id={keys[1]} />
       <Input key={keys[2]} id={keys[2]} />
+
       <Captcha />
       {isSubmitting === true ? submitSpinner : <SubmitButton />}
     </>

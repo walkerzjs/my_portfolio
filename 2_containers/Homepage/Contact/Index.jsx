@@ -18,7 +18,7 @@ const Index_ = styled.section`
   width: 100%;
   /* margin: 0 auto; */
 
-  @media screen and (max-width: 950px) {
+  @media (max-width: 950px) {
     flex-direction: column;
     align-items: center;
   }

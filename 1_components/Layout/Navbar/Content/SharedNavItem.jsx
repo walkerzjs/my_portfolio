@@ -29,7 +29,7 @@ const NavLink_ = styled.li`
   /* text-decoration: none; */
 
   opacity: 1;
-  @media screen and (max-width: 166px) {
+  @media  (max-width: 166px) {
     font-size: 1.4rem;
   }
 `;

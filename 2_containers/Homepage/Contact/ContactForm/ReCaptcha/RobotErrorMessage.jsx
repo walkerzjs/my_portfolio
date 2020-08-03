@@ -42,12 +42,26 @@ const RobotErrorMessage = (props) => {
   //   }
   //   return true;
   // };
-  const isRobot = useSelector((state) => state.contactFormReducer.isRobot);
+  const isRobot = useSelector(
+    (state) => state.contactFormReducer.isRobot,
+    (cur, prev) => {
+      // console.log("1", cur, prev);
+      return cur === prev;
+    }
+  );
   const robotCheckingError = useSelector(
-    (state) => state.contactFormReducer.robotCheckingError
+    (state) => state.contactFormReducer.robotCheckingError,
+    (cur, prev) => {
+      // console.log("2", cur, prev);
+      return cur === prev;
+    }
   );
   const robotErrorMessage = useSelector(
-    (state) => state.contactFormReducer.robotErrorMessage
+    (state) => state.contactFormReducer.robotErrorMessage,
+    (cur, prev) => {
+      // console.log("3", cur, prev);
+      return cur === prev;
+    }
   );
   // console.log("update robot error message: ", isRobot, robotCheckingError);
   let content = (

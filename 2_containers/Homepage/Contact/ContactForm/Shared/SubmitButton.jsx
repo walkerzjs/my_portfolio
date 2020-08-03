@@ -15,12 +15,12 @@ const Button_ = styled.button`
   margin: 0 auto;
   box-sizing: content-box;
   border: none;
-  /* display: block; */
+  display: block;
   color: var(--white);
   font-size: 1.9rem;
   cursor: pointer;
 
-  @media screen and (max-width: 1024px) {
+  @media (max-width: 1024px) {
     width: 100px;
     /* font-size: 1.8rem; */
     height: 4.5rem;

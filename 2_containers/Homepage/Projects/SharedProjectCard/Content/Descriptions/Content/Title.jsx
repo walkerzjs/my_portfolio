@@ -17,10 +17,10 @@ const Title_ = styled.h2`
   display: block;
   height: 20%;
   padding-bottom: 6rem;
-  @media screen and (max-width: 280px) {
+  @media (max-width: 280px) {
     font-size: 1.5rem;
   }
-  @media screen and (max-width: 170px) {
+  @media (max-width: 170px) {
     font-size: 1.2rem;
   }
 `;

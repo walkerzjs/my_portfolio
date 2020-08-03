@@ -32,6 +32,7 @@ const Input_ = styled.input`
 
 const TextArea_ = styled.textarea`
   position: relative;
+  /* resize: none; */
   z-index: 10;
   padding: 2rem;
   width: 100%;
@@ -39,6 +40,8 @@ const TextArea_ = styled.textarea`
   min-width: 12rem;
   height: 19.1rem;
   min-height: 9rem;
+  max-height: 60rem;
+  overflow: auto;
   box-sizing: border-box;
   background: var(--white) 0% 0% no-repeat padding-box;
   border-radius: 5px;
@@ -96,17 +99,20 @@ const Input = (props) => {
     );
   } else if (type === "message") {
     input = (
-      <TextArea_
-        type="text"
-        name="message"
-        themeMode={theme.mode}
-        placeholder={placeholder}
-        value={value}
-        isValid={isValid}
-        onChange={(e) => inputChange(props.id, type, e.target.value)}
-        onBlur={(e) => inputChange(props.id, type, e.target.value)}
-        aria-label={`Input your ${placeholder.replace(/.$/, "")}`}
-      />
+      <div>
+        <TextArea_
+          type="text"
+          name="message"
+          rows="8"
+          themeMode={theme.mode}
+          placeholder={placeholder}
+          value={value}
+          isValid={isValid}
+          onChange={(e) => inputChange(props.id, type, e.target.value)}
+          onBlur={(e) => inputChange(props.id, type, e.target.value)}
+          aria-label={`Input your ${placeholder.replace(/.$/, "")}`}
+        />
+      </div>
     );
   }
 

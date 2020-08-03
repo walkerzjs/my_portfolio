@@ -6,13 +6,13 @@ const SayHi_ = styled.h1`
   font: Bold 28px/13px Arial;
   height: 2rem;
   line-height: 3rem;
-  @media screen and (max-width: 1136px) {
+  @media (max-width: 1136px) {
     font-size: 2.4rem;
   }
-  @media screen and (max-width: 432px) {
+  @media (max-width: 432px) {
     height: 5rem;
   }
-  @media screen and (max-width: 278px) {
+  @media (max-width: 278px) {
     height: 7rem;
   }
 `;

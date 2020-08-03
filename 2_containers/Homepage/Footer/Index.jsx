@@ -15,7 +15,7 @@ const Footer_ = styled.footer`
   align-items: flex-end;
   justify-content: space-between;
 
-  @media screen and (max-width: 950px) {
+  @media (max-width: 950px) {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;

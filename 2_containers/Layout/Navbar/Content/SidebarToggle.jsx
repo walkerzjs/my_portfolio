@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { toggleSideDrawer } from "../../../../3_data/actions/sidebarActions";
 
 const SidebarToggle_ = styled.div`
-  @media screen and (min-width: 673px) {
+  @media (min-width: 673px) {
     display: none;
   }
 `;
