@@ -33,19 +33,6 @@ export default function App({ Component, pageProps }) {
     storage.setItem("theme", JSON.stringify(theme));
   }, [theme]);
 
-  //Stop mobile keyboard changes viewport size when poped up.
-  //https://medium.com/@sruthisreemenon/avoid-ui-distortions-during-keyboard-display-for-a-mobile-friendly-webpage-86eb99590a13
-  useEffect(() => {
-    window.onresize = function (event) {
-      document.documentElement.style.setProperty("overflow", "auto");
-      const metaViewport = document.querySelector("meta[name=viewport]");
-      metaViewport.setAttribute(
-        "content",
-        "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-      );
-    };
-  });
-
   return (
     <div>
       <Head>
@@ -56,7 +43,7 @@ export default function App({ Component, pageProps }) {
         <meta name="theme-color" content="#ffffff" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
         />
 
         {/* <meta name="viewport" content="width=device-width" /> */}
