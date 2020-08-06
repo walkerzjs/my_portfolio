@@ -4,7 +4,7 @@ WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json /app/package.json
 
-RUN yarn install
+RUN npm run install
 COPY . /app
 RUN CI=true npm run test
 # RUN mv ./babel.config.js ./babel.ignore
