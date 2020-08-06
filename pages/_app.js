@@ -14,6 +14,16 @@ export default function App({ Component, pageProps }) {
   const store = useStore(pageProps.initialReduxState);
 
   useEffect(() => {
+    // window.addEventListener("beforeunload", (event) => {
+    //   // Cancel the event as stated by the standard.
+    //   event.preventDefault();
+    //   // Chrome requires returnValue to be set.
+    //   event.returnValue = undefined;
+    //   alert("closing window");
+    //   console.log("closing  window");
+    //   return undefined;
+    // });
+
     const handleRouteChange = (url) => {
       gtag.pageview(url);
     };
@@ -41,12 +51,12 @@ export default function App({ Component, pageProps }) {
           content="Portfolio for Junshuai Zhang (Jacob)"
         />
         <meta name="theme-color" content="#ffffff" />
-        <meta
+        {/* <meta
           name="viewport"
           content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-        />
+        /> */}
 
-        {/* <meta name="viewport" content="width=device-width" /> */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link

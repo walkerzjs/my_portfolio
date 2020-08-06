@@ -9,6 +9,7 @@ const textColor = theme("mode", {
 
 const DetailedIntro_ = styled.article`
   margin-left: 16.4vw;
+  padding-top: 2%;
   width: 25.3vw;
   height: auto;
   display: block;

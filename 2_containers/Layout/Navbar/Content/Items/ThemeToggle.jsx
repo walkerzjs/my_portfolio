@@ -86,10 +86,11 @@ const ThemeToggle = (props) => {
   };
 
   return (
-    <ThemeToggleC aria-label="Click to change theme">
+    <ThemeToggleC>
       <label>
         <input
-          aria-label="toggle the theme"
+          aria-label="Press Space key to toggle the theme"
+          // tabindex="0"
           type="checkbox"
           onChange={onChange}
           checked={theme.mode === "light" ? true : false}

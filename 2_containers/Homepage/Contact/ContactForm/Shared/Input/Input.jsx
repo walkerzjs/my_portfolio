@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+roimport React, { useContext } from "react";
 import styled, { ThemeContext } from "styled-components";
 import { useSelector, useDispatch, shallowEqual } from "react-redux";
 import {
@@ -13,7 +13,8 @@ const Input_ = styled.input`
   background: var(--white) 0% 0% no-repeat padding-box;
   border-radius: 5px;
   opacity: 1;
-  font-size: 1.8rem;
+  /* font-size: 1.8rem; */
+  font-size: 18px;
   border: ${(props) => {
     if (props.isValid === false) {
       if (props.themeMode === "dark") {
@@ -46,7 +47,8 @@ const TextArea_ = styled.textarea`
   background: var(--white) 0% 0% no-repeat padding-box;
   border-radius: 5px;
   opacity: 1;
-  font-size: 1.8rem;
+  /* font-size: 1.8rem; */
+  font-size: 18px;
   font-family: Noto Sans, serif;
   /* should set this, otherwise there will be space below textarea */
   display: inline-block;
