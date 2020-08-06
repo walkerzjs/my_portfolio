@@ -3,8 +3,8 @@ FROM node:12.13.1 as build
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json /app/package.json
-RUN npm install npm@latest -g
-RUN npm i
+# RUN npm install npm@latest -g
+RUN yarn install
 COPY . /app
 RUN CI=true npm run test
 # RUN mv ./babel.config.js ./babel.ignore
