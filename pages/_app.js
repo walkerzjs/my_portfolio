@@ -51,11 +51,6 @@ export default function App({ Component, pageProps }) {
           content="Portfolio for Junshuai Zhang (Jacob)"
         />
         <meta name="theme-color" content="#ffffff" />
-        {/* <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-        /> */}
-
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" type="image/png" href="/favicon.png" />

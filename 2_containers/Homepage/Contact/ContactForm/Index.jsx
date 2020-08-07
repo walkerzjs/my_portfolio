@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import styled, { ThemeContext } from "styled-components";
 import Input from "./Shared/Input/Index";
+import TextArea from "./Shared/TextArea/Index";
 import SubmitButton from "./Shared/SubmitButton";
 import SubmitError from "./SubmitError";
 import { useSelector, shallowEqual } from "react-redux";
@@ -48,7 +49,8 @@ const Index = (props) => {
       <SubmitError />
       <Input key={keys[0]} id={keys[0]} />
       <Input key={keys[1]} id={keys[1]} />
-      <Input key={keys[2]} id={keys[2]} />
+      {/* <Input key={keys[2]} id={keys[2]} /> */}
+      <TextArea key={keys[2]} id={keys[2]} />
 
       <Captcha />
       {isSubmitting === true ? submitSpinner : <SubmitButton />}

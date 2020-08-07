@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ErrorMessage from "./ErrorMessage";
+import ErrorMessage from "../ErrorMessage";
 import Input from "./Input";
 
 const Index_ = styled.div`
