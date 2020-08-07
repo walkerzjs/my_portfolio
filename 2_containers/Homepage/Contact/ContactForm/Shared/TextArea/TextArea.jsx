@@ -38,7 +38,7 @@ const StyledTextareaAutosize_ = styled(StyledTextareaAutosize)`
   padding: 2rem;
   width: 100%;
   min-width: 12rem;
-  height: 19.1rem;
+  /* height: 19.1rem; */
   /* min-height: 9rem; */
   max-height: 60rem;
   box-sizing: border-box;
