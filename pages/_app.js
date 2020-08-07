@@ -52,6 +52,21 @@ export default function App({ Component, pageProps }) {
         />
         <meta name="theme-color" content="#ffffff" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="Junshuai Zhang's portfolio" />
+        <meta property="og:url" content="https://my-portfoliojsz.com/" />
+        <meta
+          property="og:description"
+          content="Portfolio for Junshuai Zhang (Jacob)"
+        />
+        <meta
+          property="og:image"
+          content="https://my-portfoliojsz.com/myPortfolio.jpg"
+        />
+        <meta
+          property="og:image:alt"
+          content="Screenshot of My portfolio project website"
+        />
+
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link
