@@ -13,15 +13,17 @@ const borderBottom = theme("mode", {
 });
 
 export const Nav = styled.nav`
-  z-index: 1000;
-  position: sticky;
+  z-index: 1100;
+  position: fixed;
+  backface-visibility: hidden;
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 7rem;
+  height: 70px;
   background-color: ${backgroundColor};
+  /* background-color: white; */
   border-bottom: ${borderBottom};
-  opacity: 1;
+  /* opacity: 1; */
   display: flex;
   align-items: center;
   justify-content: space-between;

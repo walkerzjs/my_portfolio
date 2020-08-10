@@ -8,7 +8,8 @@ import Footer from "./Footer/Index";
 import theme from "styled-theming";
 
 const backgroundColor = theme("mode", {
-  light: "#eeeeee",
+  // light: "#eeeeee",
+  light: "var(--grey-4)",
   dark: "var(--grey-5)",
 });
 

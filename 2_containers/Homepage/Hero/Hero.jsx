@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Portrait from "./Portrait/Portrait";
 import Intro from "./Introduction/Intro";
 const Hero_ = styled.section`
+  margin-top: 70px;
   position: relative;
   z-index: 10;
   width: 100%;

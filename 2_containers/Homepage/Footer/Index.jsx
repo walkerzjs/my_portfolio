@@ -3,6 +3,9 @@ import styled, { ThemeContext } from "styled-components";
 import Notes from "./Notes";
 import SocialMedia from "./SocialMedia";
 
+//not use this background color for theme
+// becuase there is bug for safari.
+//instead, used homepage background for global theme change.
 const Footer_ = styled.footer`
   width: 100%;
   height: 22.8vw;

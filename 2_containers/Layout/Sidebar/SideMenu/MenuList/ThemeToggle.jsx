@@ -4,6 +4,7 @@ import styled, { ThemeContext } from "styled-components";
 // https://www.w3schools.com/howto/howto_css_switch.asp
 const ThemeToggleC = styled.label`
   /* The switch - the box around the slider */
+  /* change tap focus highlight color from blue to transparent*/
   -webkit-tap-highlight-color: transparent;
   position: relative;
   display: block;
