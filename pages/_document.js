@@ -34,7 +34,6 @@ export default class MyDocument extends Document {
       <html lang="en">
         <Head>
           {/* <script type="text/javascript">alert("hello world")</script> */}
-
           <script
             dangerouslySetInnerHTML={{
               __html: `

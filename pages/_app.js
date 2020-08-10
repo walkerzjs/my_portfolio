@@ -19,8 +19,8 @@ export default function App({ Component, pageProps }) {
     Router.events.on("routeChangeComplete", handleRouteChange);
     //Because of ssr, need to use this to initialize theme from storage
     //(no storage on server, need to wait until the page rendered)
-    // const savedTheme = storage.getItem("theme");
-    // setTheme(savedTheme ? JSON.parse(savedTheme) : { mode: "light" });
+    const savedTheme = storage.getItem("theme");
+    setTheme(savedTheme ? JSON.parse(savedTheme) : { mode: "light" });
     return () => {
       Router.events.off("routeChangeComplete", handleRouteChange);
     };
