@@ -40,7 +40,7 @@ const NavLink_ = styled.li`
 const SharedNavButton = (props) => {
   return (
     <NavLink_ aria-label={`link to ${props.label} section`}>
-      <AnchorLink offset="62" href={`#${props.id}`}>
+      <AnchorLink offset="70" href={`#${props.id}`}>
         {props.label}
       </AnchorLink>
     </NavLink_>

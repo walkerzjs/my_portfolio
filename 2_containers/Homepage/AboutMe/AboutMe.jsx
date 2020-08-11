@@ -10,28 +10,23 @@ import SideDecor from "./Content/SideDecor";
 // });
 
 const AboutMe_ = styled.section`
-  /* position: relative; */
   display: flex;
   justify-content: space-between;
-  padding-top: 14vw;
-  margin-top: -9vw;
+  padding-top: 10vw;
   width: 100%;
   height: 38.3vw;
-  /* background: ${background}; */
   transition: all 0.2s ease-out;
   opacity: 1;
 
-  @media  (max-width: 1023px) {
-    height: 600px;
-    margin-top: -200px;
-    padding-top: 280px;
+  @media (max-width: 1023px) {
+    /* height: 600px; */
   }
-  @media  (max-width: 950px) {
+  @media (max-width: 950px) {
     height: auto;
-    min-height: 800px;
+    /* min-height: 600px; */
+    padding-top: 30px;
     flex-direction: column;
     align-items: center;
-    padding-top: 230px;
     justify-content: start;
   }
 `;

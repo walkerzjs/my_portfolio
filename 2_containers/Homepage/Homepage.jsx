@@ -15,6 +15,7 @@ const backgroundColor = theme("mode", {
 
 const HomePage_ = styled.div`
   /* position: relative; */
+  margin-top: 70px;
   transition: all 0.2s;
   -webkit-transition: all 200ms;
   background-color: ${backgroundColor};
