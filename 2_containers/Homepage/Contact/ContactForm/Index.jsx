@@ -14,7 +14,6 @@ const Form = styled.form`
   width: 28.3vw;
   display: flex;
   flex-direction: column;
-  /* min-height: 700px; */
 
   justify-content: flex-start;
   @media (max-width: 1280px) {
@@ -42,32 +41,20 @@ const Index = (props) => {
   let isSubmitting = useSelector(
     (state) => state.contactFormReducer.submitting
   );
-  // isSubmitting = true;
   let submitSpinner = Theme.mode === "light" ? <Spinner /> : <SpinnerWhite />;
   let content = (
     <>
       <SubmitError />
       <Input key={keys[0]} id={keys[0]} />
       <Input key={keys[1]} id={keys[1]} />
-      {/* <Input key={keys[2]} id={keys[2]} /> */}
       <TextArea key={keys[2]} id={keys[2]} />
 
       <Captcha />
       {isSubmitting === true ? submitSpinner : <SubmitButton />}
     </>
   );
-  // if (isSubmitting && Theme.mode === "light") {
-  //   content = <Spinner />;
-  // }
-  // if (isSubmitting && Theme.mode === "dark") {
-  //   content = <SpinnerWhite />;
-  // }
 
-  return (
-    // <div>
-    <Form>{content}</Form>
-    // </div>
-  );
+  return <Form>{content}</Form>;
 };
 
 export default Index;

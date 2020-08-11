@@ -5,7 +5,7 @@ import theme from "styled-theming";
 
 const textColor = theme("mode", {
   light: "var(--black)",
-  dark: "white",
+  dark: "var(--white)",
 });
 // appl
 

@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import styled, { ThemeContext } from "styled-components";
+import React from "react";
+import styled from "styled-components";
 import { useSelector, useDispatch, shallowEqual } from "react-redux";
 import {
   updateValue,
@@ -13,14 +13,13 @@ const Input_ = styled.input`
   background: var(--white) 0% 0% no-repeat padding-box;
   border-radius: 5px;
   opacity: 1;
-  /* font-size: 1.8rem; */
   font-size: 18px;
   border: ${(props) => {
     if (props.isValid === false) {
       if (props.theme.mode === "dark") {
         return "2px solid var(--red)";
       }
-      return "2px solid red";
+      return "2px solid var(--red-origin)";
     } else {
       if (props.theme.mode === "dark") {
         return "2px solid var(--grey-5)";

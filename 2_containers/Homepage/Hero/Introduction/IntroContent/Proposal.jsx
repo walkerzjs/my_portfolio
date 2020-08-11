@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+
 const Proposal_ = styled.button`
   background: var(--blue-3) 0% 0% no-repeat padding-box;
   border-radius: 7px;
@@ -14,7 +15,7 @@ const Proposal_ = styled.button`
   & a {
     text-decoration: none;
     font-size: 1.9rem;
-    color: var(--white);
+    color: white;
     display: block;
     width: 100%;
     height: 100%;

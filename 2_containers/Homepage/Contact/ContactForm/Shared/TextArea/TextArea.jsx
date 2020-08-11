@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import styled, { ThemeContext } from "styled-components";
+import React from "react";
+import styled from "styled-components";
 import { useSelector, useDispatch, shallowEqual } from "react-redux";
 import {
   updateValue,
@@ -38,8 +38,6 @@ const StyledTextareaAutosize_ = styled(StyledTextareaAutosize)`
   padding: 2rem;
   width: 100%;
   min-width: 12rem;
-  /* height: 19.1rem; */
-  /* min-height: 9rem; */
   max-height: 60rem;
   box-sizing: border-box;
   background: var(--white) 0% 0% no-repeat padding-box;
@@ -55,7 +53,7 @@ const StyledTextareaAutosize_ = styled(StyledTextareaAutosize)`
       if (props.theme.mode === "dark") {
         return "2px solid var(--red)";
       }
-      return "2px solid red";
+      return "2px solid var(--red-origin)";
     } else {
       if (props.theme.mode === "dark") {
         return "2px solid var(--grey-5)";

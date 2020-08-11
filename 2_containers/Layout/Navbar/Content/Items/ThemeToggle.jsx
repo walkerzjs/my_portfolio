@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styled, { ThemeContext } from "styled-components";
 
 // https://www.w3schools.com/howto/howto_css_switch.asp
@@ -85,21 +85,30 @@ const ThemeToggle = (props) => {
     theme.setTheme({ mode: theme.mode === "light" ? "dark" : "light" });
   };
 
-  return (
-    <ThemeToggleC>
-      <label>
-        <input
-          aria-label="Press Space key to toggle the theme"
-          // tabindex="0"
-          type="checkbox"
-          onChange={onChange}
-          checked={theme.mode === "light" ? true : false}
-        />
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
-        <span className="slider round"></span>
-      </label>
-    </ThemeToggleC>
-  );
+  let content = <li style={{ listStyle: "none", width: "60px" }}></li>;
+  if (isMounted) {
+    content = (
+      <ThemeToggleC>
+        <label>
+          <input
+            aria-label="Press Space key to toggle the theme"
+            type="checkbox"
+            onChange={onChange}
+            checked={theme.mode === "light" ? true : false}
+          />
+
+          <span className="slider round"></span>
+        </label>
+      </ThemeToggleC>
+    );
+  }
+
+  return content;
 };
 
 export default ThemeToggle;

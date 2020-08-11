@@ -1,6 +1,5 @@
 import React from "react";
 import HomePage from "../2_containers/Homepage/Homepage";
-// import dynamic from "next/dynamic";
 const Home = (props) => {
   return <HomePage></HomePage>;
 };

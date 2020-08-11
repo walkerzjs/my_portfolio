@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import theme from "styled-theming";
 
 const textColor = theme("mode", {
-  light: "red",
+  light: "var(--red-origin)",
   dark: "var(--red)",
 });
 

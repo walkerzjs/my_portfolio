@@ -8,7 +8,7 @@ const backgroundColor = theme("mode", {
 });
 
 const borderBottom = theme("mode", {
-  light: "2px solid #e5e5e5",
+  light: "2px solid var(--grey-1)",
   dark: "2px solid var(--black)",
 });
 

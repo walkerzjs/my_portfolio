@@ -3,13 +3,8 @@ import styled from "styled-components";
 import theme from "styled-theming";
 
 const backgroundColor = theme("mode", {
-  light: "#f9f9f9",
+  light: "var(--grey-4)",
   dark: "var(--grey-5)",
-});
-
-const spinnerColor = theme("mode", {
-  light: "var(--black)",
-  dark: "var(--white)",
 });
 
 const SpinnerC = styled.div`

@@ -11,8 +11,10 @@ import { ThemeProvider } from "styled-components";
 
 export default function App({ Component, pageProps }) {
   const [theme, setTheme] = useState({ mode: "light" });
+  // const [isMounted, setIsMounted] = useState(false);
   const store = useStore(pageProps.initialReduxState);
   useEffect(() => {
+    // setIsMounted(true);
     const handleRouteChange = (url) => {
       gtag.pageview(url);
     };
@@ -27,7 +29,22 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   useEffect(() => {
+    function setCSSVar(property, color) {
+      document.documentElement.style.setProperty(property, color);
+    }
+
+    const light = {
+      "--white": "#ffffff",
+      "--grey-1": "#e5e5e5",
+      "--black": "#000000",
+      "--grey-4": "#f9f9f9",
+      "--red-origin": "red",
+      "--blue-2": "#2376dd",
+    };
     storage.setItem("theme", JSON.stringify(theme));
+    for (let key in light) {
+      setCSSVar(key, light[key]);
+    }
   }, [theme]);
 
   return (
@@ -65,9 +82,11 @@ export default function App({ Component, pageProps }) {
 
       <Provider store={store}>
         <ThemeProvider theme={{ mode: theme.mode, setTheme: setTheme }}>
+          {/* {isMounted && ( */}
           <Layout>
             <Component {...pageProps} />
           </Layout>
+          {/* )} */}
         </ThemeProvider>
       </Provider>
     </div>

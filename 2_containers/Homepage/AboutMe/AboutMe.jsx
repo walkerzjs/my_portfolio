@@ -2,12 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import DetailedIntro from "./Content/DetailedIntro";
 import SideDecor from "./Content/SideDecor";
-// import theme from "styled-theming";
-
-// const background = theme("mode", {
-//   light: "#f9f9f9 0% 0% no-repeat padding-box",
-//   dark: "var(--grey-5) 0% 0% no-repeat padding-box",
-// });
 
 const AboutMe_ = styled.section`
   display: flex;

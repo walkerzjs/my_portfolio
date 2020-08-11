@@ -33,6 +33,8 @@ export default class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
+          {/* <script src="theme.js"></script> */}
+
           {/* <script type="text/javascript">alert("hello world")</script> */}
           <script
             dangerouslySetInnerHTML={{
@@ -64,6 +66,55 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              (() => {
+                var currentTheme;
+              
+                function changeTheme(inputTheme) {
+                  
+                  if (JSON.parse(inputTheme).mode === "dark") {
+                
+                    const theme = themeConfig.dark;
+                    for (let key in theme) {
+                      setCSSVar(key, theme[key]);
+                    }
+                    localStorage.setItem("theme", inputTheme);
+                  } else {
+                    const theme = themeConfig.light;
+                    for (let key in theme) {
+                      setCSSVar(key, theme[key]);
+                    }
+                    localStorage.setItem("theme", inputTheme);
+                  }
+                }
+              
+                function setCSSVar(property, color) {
+                  document.documentElement.style.setProperty(property, color);
+                }
+                try {
+                  currentTheme = localStorage.getItem("theme") || { mode: "light" };
+                  window.__theme = currentTheme.mode;
+                  var themeConfig = {
+                    dark: {
+                      "--white": "#000000",
+                      "--grey-1": "#000000",
+                      "--black": "#ffffff",
+                      "--grey-4": "#2e2e2e",
+                      "--red-origin": "#ff5f57",
+                      "--blue-2": "#2e2e2e",
+                    },
+                  };
+              
+                  changeTheme(currentTheme);
+                } catch (err) {
+                  console.log(new Error("accessing theme has been denied"));
+                }
+              })();
+          `,
+            }}
+          />
           <noscript
             dangerouslySetInnerHTML={{
               __html: `
@@ -72,6 +123,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         `,
             }}
           />
+
           <Main />
           <NextScript />
         </body>
