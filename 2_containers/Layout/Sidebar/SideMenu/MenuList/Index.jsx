@@ -3,6 +3,7 @@ import styled from "styled-components";
 import MenuItem from "./MenuItem";
 import theme from "styled-theming";
 import ThemeToggle from "./ThemeToggle";
+
 const backgroundColor = theme("mode", {
   light: "var(--white)",
   dark: "var(--grey-5)",
@@ -20,33 +21,14 @@ const MenuList_ = styled.ul`
 const MenuList = (props) => {
   return (
     <MenuList_>
-      <MenuItem sectionId="aboutMe" sectionName="About Me" />
-      <MenuItem sectionId="projects" sectionName="Projects" />
-      <MenuItem sectionId="contact" sectionName="Contact" />
-      {/* <MenuItem sectionId="aboutMe" sectionName="About Me" />
-      <MenuItem sectionId="projects" sectionName="Projects" />
-      <MenuItem sectionId="contact" sectionName="Contact" />
-      <MenuItem sectionId="aboutMe" sectionName="About Me" />
-      <MenuItem sectionId="projects" sectionName="Projects" />
-      <MenuItem sectionId="contact" sectionName="Contact" />
-      <MenuItem sectionId="aboutMe" sectionName="About Me" />
-      <MenuItem sectionId="projects" sectionName="Projects" />
-      <MenuItem sectionId="contact" sectionName="Contact" />
-      <MenuItem sectionId="aboutMe" sectionName="About Me" />
-      <MenuItem sectionId="projects" sectionName="Projects" />
-      <MenuItem sectionId="contact" sectionName="Contact" />
-      <MenuItem sectionId="aboutMe" sectionName="About Me" />
-      <MenuItem sectionId="projects" sectionName="Projects" />
-      <MenuItem sectionId="contact" sectionName="Contact" />
-      <MenuItem sectionId="aboutMe" sectionName="About Me" />
-      <MenuItem sectionId="projects" sectionName="Projects" />
-      <MenuItem sectionId="contact" sectionName="Contact" />
-      <MenuItem sectionId="aboutMe" sectionName="About Me" />
-      <MenuItem sectionId="projects" sectionName="Projects" />
-      <MenuItem sectionId="contact" sectionName="Contact" />
-      <MenuItem sectionId="aboutMe" sectionName="About Me" />
-      <MenuItem sectionId="projects" sectionName="Projects" />
-      <MenuItem sectionId="contact" sectionName="Contact" /> */}
+      <MenuItem id="aboutMe" label="About Me" />
+      <MenuItem
+        id="https://asadream.my-portfoliojsz.com/"
+        label="Blog"
+        type="external"
+      />
+      <MenuItem id="projects" label="Projects" />
+      <MenuItem id="contact" label="Contact" />
       <ThemeToggle />
     </MenuList_>
   );

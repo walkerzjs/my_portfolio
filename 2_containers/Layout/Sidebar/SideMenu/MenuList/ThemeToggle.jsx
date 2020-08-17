@@ -23,7 +23,6 @@ const ThemeToggleC = styled.label`
     left: 0;
     right: 0;
     bottom: 0;
-    /* background-color: #ccc; */
     background-color: var(--grey-3);
     -webkit-transition: 0.2s ease-out;
     transition: 0.2s ease-out;

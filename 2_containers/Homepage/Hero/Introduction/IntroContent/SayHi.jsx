@@ -6,7 +6,7 @@ const SayHi_ = styled.h1`
   font: Bold 28px/13px Arial;
   height: 2rem;
   line-height: 3rem;
-  @media (max-width: 1136px) {
+  @media (max-width: 1190px) {
     font-size: 2.4rem;
   }
   @media (max-width: 432px) {

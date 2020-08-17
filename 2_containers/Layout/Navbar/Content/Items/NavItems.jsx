@@ -10,6 +10,11 @@ const NavItems = (props) => {
         id="aboutMe"
         label="About me"
       />
+      <SharedNavItem
+        id="https://asadream.my-portfoliojsz.com/"
+        label="Blog"
+        type="external"
+      />
       <SharedNavItem id="projects" label="Projects" />
       <SharedNavItem id="contact" label="Contact" />
 

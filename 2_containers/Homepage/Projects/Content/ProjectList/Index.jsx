@@ -13,6 +13,7 @@ const ProjectList_ = styled.ul`
 
   justify-content: space-between;
   grid-column-gap: 8vw;
+  grid-row-gap: 5rem;
 
   @media (max-width: 1450px) {
     grid-column-gap: 4vw;
@@ -20,13 +21,10 @@ const ProjectList_ = styled.ul`
   @media (max-width: 1120px) {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 15vw;
-    grid-row-gap: 5rem;
-    /* grid-template-rows:  */
   }
   @media (max-width: 980px) {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 12vw;
-    grid-row-gap: 5rem;
   }
   @media (max-width: 896px) {
     grid-column-gap: 8vw;
@@ -53,13 +51,17 @@ const ProjectList = (props) => {
     (state) => Object.keys(state.projectsReducer),
     shallowEqual
   );
-  const projects = projectData.map((id) => {
-    return (
-      <li key={id}>
-        <SharedCard id={id} />
-      </li>
-    );
-  });
+  const projects = projectData
+    .sort((a, b) => {
+      return parseInt(b) - parseInt(a);
+    })
+    .map((id) => {
+      return (
+        <li key={id}>
+          <SharedCard id={id} />
+        </li>
+      );
+    });
 
   return <ProjectList_>{projects}</ProjectList_>;
 };

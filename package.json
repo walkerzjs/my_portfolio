@@ -5,7 +5,7 @@
   "scripts": {
     "dev_sw": "node ssr-server.js",
     "start_sw": "NODE_ENV=production node ssr-server.js",
-    "dev": "next",
+    "dev": "next -p 1234",
     "start": "next start",
     "build": "next build",
     "test": "jest",
@@ -20,7 +20,7 @@
     "express": "^4.17.1",
     "local-storage-fallback": "^4.1.1",
     "next": "^9.4.4",
-    "next-pwa": "^3.0.3",
+    "next-pwa": "^3.1.1",
     "react": "16.13.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "16.13.1",

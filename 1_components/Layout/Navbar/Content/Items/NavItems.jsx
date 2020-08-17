@@ -6,7 +6,7 @@ const NavItems_ = styled.ul`
   justify-content: space-between;
   align-items: center;
   margin-right: 9.3vw;
-  width: 34.4rem;
+  /* width: 34.4rem; */
 
   @media (max-width: 672px) {
     display: none;

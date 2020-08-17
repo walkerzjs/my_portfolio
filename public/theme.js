@@ -1,3 +1,4 @@
+//referred https://github.com/vercel/next.js/discussions/12533
 (() => {
   var currentTheme;
 

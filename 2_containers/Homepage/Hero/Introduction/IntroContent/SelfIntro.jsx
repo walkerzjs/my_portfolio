@@ -4,7 +4,7 @@ import styled from "styled-components";
 const SelfIntro_ = styled.p`
   font-size: 2rem;
   margin-top: 5rem;
-  @media (max-width: 1136px) {
+  @media (max-width: 1190px) {
     margin-top: 3rem;
   }
   @media (max-width: 320px) {

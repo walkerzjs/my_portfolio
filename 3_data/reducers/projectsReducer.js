@@ -1,10 +1,10 @@
 const initialState = {
   1: {
-    image: "/myPortfolio.jpg",
-    title: "My portfolio",
-    desc: "This is my personal website to show my recent work and personality.",
-    githubLink: "https://github.com/walkerzjs/my-portfolio-open",
-    website: "https://my-portfoliojsz.com/",
+    image: "/lms.jpg",
+    title: "Learning Management System",
+    desc: "A system for course and student enrolment.",
+    githubLink: "https://github.com/walkerzjs/LMS_Frontend",
+    website: "https://lms-jz.azurewebsites.net/",
   },
   2: {
     image: "/burgerBuilder.jpg",
@@ -24,11 +24,18 @@ const initialState = {
     website: "https://react-my-burger-2ef30.firebaseapp.com/",
   },
   3: {
-    image: "/lms.jpg",
-    title: "Learning Management System",
-    desc: "A system for course and student enrolment.",
-    githubLink: "https://github.com/walkerzjs/LMS_Frontend",
-    website: "https://lms-jz.azurewebsites.net/",
+    image: "/myPortfolio.jpg",
+    title: "This website",
+    desc: "This is my personal website to show my recent work and personality.",
+    githubLink: "https://github.com/walkerzjs/my-portfolio-open",
+    website: "https://my-portfoliojsz.com/",
+  },
+  4: {
+    image: "/AsADream.jpeg",
+    title: "AsADream",
+    desc: "My personal blog",
+    githubLink: "https://github.com/walkerzjs/AsADream",
+    website: "https://asadream.my-portfoliojsz.com/",
   },
 };
 

@@ -389,6 +389,7 @@ html {
   font-size: 62.5%;
   /* Remove 300ms delay on mobile browsers */
   touch-action: manipulation;
+  /* overscroll-behavior-y: none; */
 }
 
 @media (max-width: 1450px) {
@@ -399,6 +400,7 @@ html {
 
 body {
   font-family: "Noto Sans", serif;
+  /* overscroll-behavior-y: none; */
 }
 
 :root {

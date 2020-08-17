@@ -27,13 +27,33 @@ const MenuItem_ = styled.li`
 const MenuItem = (props) => {
   return (
     <MenuItem_>
-      <AnchorLink
-        offset="62"
-        href={`#${props.sectionId}`}
-        aria-label={`Click to ${props.sectionName} section`}
-      >
-        {props.sectionName}
-      </AnchorLink>
+      {(() => {
+        switch (props.type) {
+          case "external":
+            return (
+              <a href={props.id} rel="noopener noreferrer">
+                {props.label}
+              </a>
+            );
+          case "email":
+            return (
+              <a href={`mailto:${props.id}`} rel="noopener noreferrer">
+                {props.label}
+              </a>
+            );
+
+          default:
+            return (
+              <AnchorLink
+                offset="62"
+                href={`#${props.id}`}
+                aria-label={`Click to ${props.label} section`}
+              >
+                {props.label}
+              </AnchorLink>
+            );
+        }
+      })()}
     </MenuItem_>
   );
 };

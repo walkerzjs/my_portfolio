@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Proposal from "./IntroContent/Proposal";
+import ProposalEmail from "./IntroContent/ProposalEmail";
 import SayHi from "./IntroContent/SayHi";
 import SelfIntro from "./IntroContent/SelfIntro";
 
@@ -9,21 +10,18 @@ const Intro_ = styled.div`
   width: 30.5vw;
   margin-top: 9vw;
   margin-left: 16.5vw;
-  @media (max-width: 1136px) {
+
+  @media (max-width: 1190px) {
     margin-top: 8vw;
-  }
-  @media (max-width: 1023px) {
-    margin-top: 7vw;
-  }
-  @media (max-width: 950px) {
     width: 70vw;
     margin-left: 0;
     height: auto;
     margin-top: 10%;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
   }
+  @media (max-width: 1023px) {
+    margin-top: 7vw;
+  }
+
   @media (max-width: 546px) {
     margin-top: 80px;
   }
@@ -36,6 +34,7 @@ const Intro = (props) => {
       <SayHi />
       <SelfIntro />
       <Proposal />
+      <ProposalEmail />
     </Intro_>
   );
 };

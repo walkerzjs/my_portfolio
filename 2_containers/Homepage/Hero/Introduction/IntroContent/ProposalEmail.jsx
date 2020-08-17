@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
-const Proposal_ = styled.button`
+const ProposalEmail_ = styled.button`
   background: var(--blue-3) 0% 0% no-repeat padding-box;
   border-radius: 7px;
   padding-left: 2rem;
   padding-right: 2rem;
-  margin-right: 1.5rem;
   height: 5rem;
   border: none;
+  display: inline-block;
 
   margin-top: 1.5rem;
   display: inline-block;
@@ -35,14 +35,14 @@ const Proposal_ = styled.button`
   }
 `;
 
-const Proposal = (props) => {
+const ProposalEmail = (props) => {
   return (
-    <Proposal_>
-      <AnchorLink offset="62" href="#contact">
-        Leave me a message
-      </AnchorLink>
-    </Proposal_>
+    <ProposalEmail_>
+      <a href={`mailto:walkerzjs2@gmail.com`} rel="noopener noreferrer">
+        Send me email
+      </a>
+    </ProposalEmail_>
   );
 };
 
-export default Proposal;
+export default ProposalEmail;
