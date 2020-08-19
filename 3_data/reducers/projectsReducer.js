@@ -27,7 +27,7 @@ const initialState = {
     image: "/myPortfolio.jpg",
     title: "This website",
     desc: "This is my personal website to show my recent work and personality.",
-    githubLink: "https://github.com/walkerzjs/my-portfolio-open",
+    githubLink: "https://github.com/walkerzjs/my-portfolioJSZ",
     website: "https://my-portfoliojsz.com/",
   },
   4: {
