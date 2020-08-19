@@ -20,7 +20,7 @@ const initialState = {
         React-The Complete Guide
       </a>,
     ],
-    githubLink: "",
+    githubLink: "https://github.com/walkerzjs/Burger_Builder",
     website: "https://react-my-burger-2ef30.firebaseapp.com/",
   },
   3: {
