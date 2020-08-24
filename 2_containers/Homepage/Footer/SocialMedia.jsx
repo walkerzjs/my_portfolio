@@ -7,9 +7,13 @@ const SocialMedia_ = styled.div`
 
   margin-right: 13.5vw;
   margin-bottom: 5.7vw;
+  a {
+    margin-right: 10px;
+  }
   img {
     width: 3rem;
     height: 3rem;
+
     @media (max-width: 720px) {
       width: 2.4rem;
       height: 2.4rem;
@@ -33,6 +37,14 @@ const SocialMedia = (props) => {
         aria-label="my github link"
       >
         <img src="/logoGithub.svg" alt="my github link image" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/junshuai-zhang-jacob-55774594/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="my LinkedIn link"
+      >
+        <img src="/logo-linkedin.svg" alt="my linkedin link image" />
       </a>
     </SocialMedia_>
   );

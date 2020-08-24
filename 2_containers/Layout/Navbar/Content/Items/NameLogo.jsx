@@ -6,7 +6,7 @@ const NameLogo = (props) => {
     <NameLogoPresentation>
       <SharedNavItem
         id="intro"
-        label="Junshuai Zhang"
+        label="Junshuai Zhang (Jacob)"
         ariaLabel="navigate to home page"
       />
     </NameLogoPresentation>
