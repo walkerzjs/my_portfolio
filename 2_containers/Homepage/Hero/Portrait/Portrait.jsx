@@ -4,9 +4,10 @@ import styled from "styled-components";
 const Portrait_ = styled.div`
   width: 33vw;
   height: 16.2vw;
+
   margin-top: 6vw;
   margin-right: 10.8vw;
-  background: transparent url("/portrait.svg") 0% 0% no-repeat padding-box;
+  background: transparent url("/portrait3.svg") 0% 0% no-repeat padding-box;
   background-size: cover;
   opacity: 1;
 

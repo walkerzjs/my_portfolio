@@ -19,7 +19,7 @@ const Notes_ = styled.span`
 `;
 
 const Notes = (props) => {
-  return <Notes_>2020, by Junshuai Zhang</Notes_>;
+  return <Notes_>2020, by Junshuai Zhang (Jacob)</Notes_>;
 };
 
 export default Notes;

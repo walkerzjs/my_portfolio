@@ -23,6 +23,7 @@ const SideDecor_ = styled.img`
     width: 65vw;
   }
 `;
+
 // https://pixabay.com/vectors/online-learning-call-webinar-5268393/
 const SideDecor = (props) => {
   return <SideDecor_ src="/meeting.svg" alt="" />;

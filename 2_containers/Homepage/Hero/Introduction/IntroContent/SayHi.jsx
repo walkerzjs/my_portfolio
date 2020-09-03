@@ -18,7 +18,7 @@ const SayHi_ = styled.h1`
 `;
 
 const SayHi = (props) => {
-  return <SayHi_>Hi, I am Junshuai Zhang</SayHi_>;
+  return <SayHi_>Hi, I am Jacob</SayHi_>;
 };
 
 export default SayHi;

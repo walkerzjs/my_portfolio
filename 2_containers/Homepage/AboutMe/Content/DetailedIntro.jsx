@@ -41,10 +41,7 @@ const DetailedIntro = (props) => {
         I am a React developer, but can also develop in .NET and python for
         backend. I am good at SQL too.
       </p>
-      <p>
-        Nowadays, people are using cloud technology, and I am. I use Amazon Web
-        Service and Microsoft Azure to facilitate my development process.
-      </p>
+      <p>I like to use cloud technologies to help with my development.</p>
     </DetailedIntro_>
   );
 };
