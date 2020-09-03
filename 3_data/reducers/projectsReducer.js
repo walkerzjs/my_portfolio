@@ -42,6 +42,14 @@ const initialState = {
     website: "https://asadream.my-portfoliojsz.com/",
     Technologies: "React, Redux, Graphql, AWS",
   },
+  5: {
+    image: "/CatOrBird.jpeg",
+    title: "CatOrBird",
+    desc: "It can tell a cat from a bird.",
+    githubLink: "https://github.com/walkerzjs/CatOrBirdF",
+    website: "https://catorbird.my-portfoliojsz.com/",
+    Technologies: "React, Python, Machine Learning",
+  },
 };
 
 const reducer = (state = initialState, action) => {

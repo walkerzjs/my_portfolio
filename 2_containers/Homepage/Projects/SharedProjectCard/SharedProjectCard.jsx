@@ -16,7 +16,7 @@ const SharedProjectCard_ = styled.div`
   background: ${background};
   box-shadow: 0px 3px 8px #00000029;
   border-radius: 3rem;
-  padding: 4rem;
+  padding: 3rem 3rem;
   opacity: 1;
   transition: all 0.2s ease-out;
 

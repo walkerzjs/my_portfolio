@@ -16,7 +16,7 @@ const ProjectList_ = styled.ul`
   grid-row-gap: 5rem;
 
   @media (max-width: 1450px) {
-    grid-column-gap: 4vw;
+    grid-column-gap: 5vw;
   }
   @media (max-width: 1120px) {
     grid-template-columns: repeat(2, 1fr);
@@ -30,18 +30,18 @@ const ProjectList_ = styled.ul`
     grid-column-gap: 8vw;
   }
   @media (max-width: 750px) {
-    grid-template-columns: 34rem;
+    grid-template-columns: 28rem;
     justify-content: center;
     grid-row-gap: 7rem;
   }
   @media (max-width: 448px) {
     margin-top: 5rem;
-    grid-template-columns: 32rem;
+    /* grid-template-columns: 32rem; */
     grid-row-gap: 5rem;
   }
 
   @media (max-width: 300px) {
-    grid-template-columns: 90vw;
+    grid-template-columns: 100vw;
     margin-top: 3rem;
   }
 `;

@@ -23,9 +23,9 @@ const SideDecor_ = styled.img`
     width: 65vw;
   }
 `;
-//https://pixabay.com/vectors/meeting-conference-people-table-152506/
+// https://pixabay.com/vectors/online-learning-call-webinar-5268393/
 const SideDecor = (props) => {
-  return <SideDecor_ src="/ContactDecor.svg" alt="" />;
+  return <SideDecor_ src="/meeting.svg" alt="" />;
 };
 
 export default SideDecor;
