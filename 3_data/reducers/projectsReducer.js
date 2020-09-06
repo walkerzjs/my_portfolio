@@ -5,8 +5,7 @@ const initialState = {
     desc: "A system for course and student enrolment.",
     githubLink: "https://github.com/walkerzjs/LMS_Frontend",
     website: "https://lms-jz.azurewebsites.net/",
-    Technologies:
-      "React, Redux, Azure, AWS, SQL Server, .NET Framework, .NET core",
+    Technologies: "React, Redux, Azure, SQL Server, .NET Framework, .NET core",
   },
   // 2: {
   //   image: "/burgerBuilder.jpg",
