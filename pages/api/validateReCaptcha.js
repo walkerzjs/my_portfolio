@@ -11,6 +11,7 @@ const cors = initMiddleware(
       "https://my-portfoliojsz.com",
       "http://localhost:3000",
       "http://localhost",
+      "http://localhost:1234",
     ],
   })
 );

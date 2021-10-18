@@ -385,6 +385,7 @@
 
   box-sizing: border-box;
 }
+
 html {
   font-size: 62.5%;
   /* Remove 300ms delay on mobile browsers */

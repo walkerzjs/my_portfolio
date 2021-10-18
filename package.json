@@ -5,7 +5,7 @@
   "scripts": {
     "dev_sw": "node ssr-server.js",
     "start_sw": "NODE_ENV=production node ssr-server.js",
-    "dev": "next -p 1234",
+    "dev": "next -p 3000",
     "start": "next start",
     "build": "next build",
     "test": "jest",
@@ -34,6 +34,7 @@
     "styled-theming": "^2.2.0"
   },
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.15.8",
     "@babel/preset-env": "^7.10.3",
     "@babel/preset-react": "^7.10.1",
     "babel-jest": "^26.1.0",
