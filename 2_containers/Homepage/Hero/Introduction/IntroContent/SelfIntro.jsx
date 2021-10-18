@@ -14,7 +14,7 @@ const SelfIntro_ = styled.p`
 
 const SelfIntro = (props) => {
   return (
-    <SelfIntro_>I am a software developer living in Melbourne.</SelfIntro_>
+    <SelfIntro_>I am a software developer living in Melbourne. I am currently working as a data analyst.</SelfIntro_>
   );
 };
 

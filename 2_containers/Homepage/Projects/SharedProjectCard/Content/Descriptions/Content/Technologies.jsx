@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useSelector } from "react-redux";
+import { useSelector,shallowEqual } from "react-redux";
 import theme from "styled-theming";
 
 const textColor = theme("mode", {
@@ -31,6 +31,7 @@ const Technologies_ = styled.p`
 const Technologies = (props) => {
   const tech = useSelector(
     (state) => state.projectsReducer[props.id].Technologies
+  
   );
   return <Technologies_>{tech}</Technologies_>;
 };

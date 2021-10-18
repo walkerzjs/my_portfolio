@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import Title from "./Content/Title";
 import Description from "./Content/Description";
 import Links from "./Content/Links";

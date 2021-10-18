@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useSelector } from "react-redux";
+import { useSelector,shallowEqual } from "react-redux";
 import theme from "styled-theming";
 
 const textColor = theme("mode", {
@@ -26,7 +26,9 @@ const Title_ = styled.h2`
 `;
 
 const Title = (props) => {
-  const title = useSelector((state) => state.projectsReducer[props.id].title);
+  const title = useSelector((state) => state.projectsReducer[props.id].title
+
+  );
 
   return <Title_>{title}</Title_>;
 };

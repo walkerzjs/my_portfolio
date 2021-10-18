@@ -19,7 +19,8 @@ const Notes_ = styled.span`
 `;
 
 const Notes = (props) => {
-  return <Notes_>2020, by Junshuai Zhang (Jacob)</Notes_>;
+  let newDate = new Date()
+  return <Notes_>2020 - {newDate.getFullYear()}, by Junshuai Zhang (Jacob)</Notes_>;
 };
 
 export default Notes;

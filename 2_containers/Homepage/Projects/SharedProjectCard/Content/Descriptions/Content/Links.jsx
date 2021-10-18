@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useSelector } from "react-redux";
+import { useSelector,shallowEqual } from "react-redux";
 import theme from "styled-theming";
 
 const textColor = theme("mode", {
@@ -27,6 +27,7 @@ const Links_ = styled.div`
 const Links = (props) => {
   const githubLink = useSelector(
     (state) => state.projectsReducer[props.id].githubLink
+
   );
 
   return (

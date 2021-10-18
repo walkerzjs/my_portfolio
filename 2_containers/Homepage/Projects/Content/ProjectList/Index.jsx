@@ -49,7 +49,7 @@ const ProjectList_ = styled.ul`
 const ProjectList = (props) => {
   const projectData = useSelector(
     (state) => Object.keys(state.projectsReducer),
-    shallowEqual
+   ()=>true
   );
   const projects = projectData
     .sort((a, b) => {

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useSelector } from "react-redux";
+import { useSelector ,shallowEqual} from "react-redux";
 
 const Image_ = styled.div`
   & img {
@@ -23,9 +23,11 @@ const Image_ = styled.div`
 const Image = (props) => {
   const { image, title } = useSelector(
     (state) => state.projectsReducer[props.id]
+ 
   );
   const address = useSelector(
     (state) => state.projectsReducer[props.id].website
+ 
   );
   return (
     <Image_>

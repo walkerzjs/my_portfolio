@@ -1,7 +1,6 @@
 import * as actionTypes from "../actions/actionTypes";
 const initialState = {
   isValid: undefined,
-
   isRobot: undefined,
   robotChecking: false,
   robotCheckingSuccess: false,
@@ -21,7 +20,6 @@ const initialState = {
       validationRequired: true,
       isValid: undefined,
       value: "",
-
       validationErrorMessage: "",
     },
     2: {
@@ -58,6 +56,7 @@ const contactFormReducer = (state = initialState, action) => {
       config.value = action.value;
       state.formConfig[action.key] = { ...config };
       return { ...state };
+     // return state;
     case actionTypes.VALIDATING:
       config = { ...state.formConfig[action.key] };
       config.isValid = action.isValid;

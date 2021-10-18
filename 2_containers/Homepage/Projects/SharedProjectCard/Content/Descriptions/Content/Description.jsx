@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useSelector } from "react-redux";
+import { useSelector,shallowEqual } from "react-redux";
 import theme from "styled-theming";
 
 const textColor = theme("mode", {
@@ -30,7 +30,7 @@ const Description_ = styled.p`
 const Description = (props) => {
   const description = useSelector(
     (state) => state.projectsReducer[props.id].desc
-  );
+   );
   return <Description_>{description}</Description_>;
 };
 
