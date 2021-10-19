@@ -30,6 +30,7 @@ export default async (req, res) => {
     params: requestObject,
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
+      "Set-Cookie": "SameSite=None; Secure"
     },
   })
     .then((response) => {

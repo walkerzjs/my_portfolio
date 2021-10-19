@@ -1,5 +1,6 @@
+
 //for styled components SSR support
-import Document, { Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 import { GA_TRACKING_ID } from "../2_containers/Shared/gtag";
 export default class MyDocument extends Document {
@@ -32,7 +33,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html lang="en">
+      <Html lang="en">
         <Head>
           {/* <script src="theme.js"></script> */}
 
@@ -128,7 +129,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
