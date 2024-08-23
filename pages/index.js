@@ -1,5 +1,5 @@
 import React from "react";
-import HomePage from "../2_containers/Homepage/Homepage";
+import HomePage from "../main_containers/Homepage/Homepage";
 const Home = (props) => {
   return <HomePage></HomePage>;
 };
@@ -7,7 +7,7 @@ const Home = (props) => {
 export default Home;
 
 // test diable SSR
-// const HomeNoSSR = dynamic(() => import("../2_containers/homepage/homepage"), {
+// const HomeNoSSR = dynamic(() => import("../main_containers/homepage/homepage"), {
 //   ssr: false,
 // });
 // export default HomeNoSSR;

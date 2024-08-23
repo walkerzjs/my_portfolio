@@ -2,7 +2,7 @@
 //for styled components SSR support
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
-import { GA_TRACKING_ID } from "../2_containers/Shared/gtag";
+import { GA_TRACKING_ID } from "../main_containers/Shared/gtag";
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();

@@ -4,7 +4,7 @@ import { useSelector, useDispatch, shallowEqual } from "react-redux";
 import {
   updateValue,
   validating,
-} from "../../../../../../3_data/actions/contactFormActions";
+} from "../../../../../../main_data/actions/contactFormActions";
 
 const Input_ = styled.input`
   padding: 0 2rem;

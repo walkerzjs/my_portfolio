@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Provider } from "react-redux";
-import { useStore } from "../3_data/store";
+import { useStore } from "../main_data/store";
 import storage from "local-storage-fallback";
 import "./_app.css";
-import Layout from "../2_containers/Layout/Layout";
+import Layout from "../main_containers/Layout/Layout";
 import Head from "next/head";
 import Router from "next/router";
-import * as gtag from "../2_containers/Shared/gtag";
+import * as gtag from "../main_containers/Shared/gtag";
 import { ThemeProvider } from "styled-components";
 
 export default function App({ Component, pageProps }) {

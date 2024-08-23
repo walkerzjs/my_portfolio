@@ -5,8 +5,8 @@ import TextArea from "./Shared/TextArea/Index";
 import SubmitButton from "./Shared/SubmitButton";
 import SubmitError from "./SubmitError";
 import { useSelector, shallowEqual } from "react-redux";
-import Spinner from "../../../../2_containers/Shared/Spinner";
-import SpinnerWhite from "../../../../2_containers/Shared/SpinnerWhite";
+import Spinner from "../../../../main_containers/Shared/Spinner";
+import SpinnerWhite from "../../../../main_containers/Shared/SpinnerWhite";
 import Captcha from "./ReCaptcha/Index.jsx";
 
 const Form = styled.form`

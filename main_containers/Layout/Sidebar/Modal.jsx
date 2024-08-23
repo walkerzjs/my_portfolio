@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import Modal from "../../Shared/Modal";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleSideDrawer } from "../../../3_data/actions/sidebarActions";
+import { toggleSideDrawer } from "../../../main_data/actions/sidebarActions";
 
 const Modal_Sidebar = (props) => {
   //   useEffect(() => {

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   submit,
   submitCheck,
-} from "../../../../../3_data/actions/contactFormActions";
+} from "../../../../../main_data/actions/contactFormActions";
 
 const Button_ = styled.button`
   background: var(--blue-3) 0% 0% no-repeat padding-box;

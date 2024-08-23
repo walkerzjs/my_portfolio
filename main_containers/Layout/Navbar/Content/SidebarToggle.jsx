@@ -1,11 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import SidebarToggle from "../../../Shared/SidebarToggle";
-import { toggleSideDrawer } from "../../../../../3_data/actions/sidebarActions";
+import SidebarToggle from "../../Shared/SidebarToggle";
 import { useDispatch } from "react-redux";
-const SidebarToggle_ = styled.div``;
+import { toggleSideDrawer } from "../../../../main_data/actions/sidebarActions";
 
-const SidebarToggleDrawer = (props) => {
+const SidebarToggle_ = styled.div`
+  @media (min-width: 673px) {
+    display: none;
+  }
+`;
+
+const SidebarToggleNav = (props) => {
   const dispatch = useDispatch();
   const onClick = () => {
     dispatch(toggleSideDrawer());
@@ -17,4 +22,4 @@ const SidebarToggleDrawer = (props) => {
   );
 };
 
-export default SidebarToggleDrawer;
+export default SidebarToggleNav;
