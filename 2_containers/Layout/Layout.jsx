@@ -9,7 +9,7 @@ const Layout = (props) => {
     <div>
       <Navbar />
       <Sidebar />
-
+      {/* main is the homepage */}
       <main>{props.children}</main>
       <Modal />
     </div>

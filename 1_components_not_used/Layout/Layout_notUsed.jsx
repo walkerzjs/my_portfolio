@@ -3,8 +3,8 @@ import Navbar from "./Navbar/Navbar";
 import Sidebar from "./Sidebar/Sidebar";
 import styled from "styled-components";
 import NameLogo from "./Navbar/Content/Items/NameLogo";
-import NavItems from "./Navbar/Content/Items/NavItems";
-import SharedNavItem from "./Navbar/Content/SharedNavItem";
+import NavItems from "./Navbar/Content/Items/NavItems_notUsed";
+import SharedNavItem from "./Navbar/Content/SharedNavItem_notUsed";
 
 export const Main = styled.main`
   /* margin-top: 7rem; */
