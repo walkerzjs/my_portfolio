@@ -38,10 +38,9 @@ const DetailedIntro = (props) => {
   return (
     <DetailedIntro_ aria-label="My detailed introduction">
       <p>
-        I am a React developer, but can also develop in .NET and python for
-        backend. I am good at SQL too.
+        I am a Software Developer skilled in SQL, Python and React. Data Analysis and data warehousing is my past experience.
       </p>
-      <p>I like to use cloud technologies to help with my development.</p>
+      <p>Let's work tegother for the benefit of others.</p>
     </DetailedIntro_>
   );
 };

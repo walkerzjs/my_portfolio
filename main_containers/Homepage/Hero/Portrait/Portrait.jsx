@@ -28,6 +28,7 @@ const Portrait_ = styled.div`
     width: 90vw;
     height: 45vw;
   }
+
 `;
 
 const Portrait = (props) => {

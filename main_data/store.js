@@ -2,18 +2,19 @@
 
 import { useMemo } from "react";
 import { createStore, applyMiddleware } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
-import thunk from "redux-thunk";
+// import { composeWithDevTools } from "redux-devtools-extension";
+import {thunk} from "redux-thunk";
 import reducer from "./reducers/index.js";
 let store;
 
 const initialState = {};
 
-const devTools =
-  process.env.NODE_ENV === "production"
-    ? applyMiddleware(thunk)
-    : composeWithDevTools(applyMiddleware(thunk));
-// const devTools = applyMiddleware(thunk);
+// const devTools =
+//   process.env.NODE_ENV === "production"
+//     ? applyMiddleware(thunk)
+//     : applyMiddleware(thunk);
+    // : composeWithDevTools(applyMiddleware(thunk));
+const devTools = applyMiddleware(thunk);
 // const devTools = composeWithDevTools(applyMiddleware(thunk));
 
 function initStore(preloadedState = initialState) {

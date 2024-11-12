@@ -28,7 +28,7 @@ const Hero = (props) => {
   return (
     <Hero_ id="intro" aria-label="hero section">
       <Intro />
-      <Portrait />
+      {/* <Portrait /> */}
     </Hero_>
   );
 };
