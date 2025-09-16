@@ -39,7 +39,7 @@ const SocialMedia = (props) => {
         <img src="/logoGithub.svg" alt="my github link image" />
       </a>
       <a
-        href="https://www.linkedin.com/in/junshuai-zhang-jacob-55774594/"
+        href="https://www.linkedin.com/in/junshuai-zhang-55774594/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="my LinkedIn link"

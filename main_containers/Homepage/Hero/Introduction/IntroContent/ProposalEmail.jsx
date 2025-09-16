@@ -38,7 +38,7 @@ const ProposalEmail_ = styled.button`
 const ProposalEmail = (props) => {
   return (
     <ProposalEmail_>
-      <a href={`mailto:walkerzjs2@gmail.com`} rel="noopener noreferrer">
+      <a href={`mailto:junshuai.jacob.zhang@gmail.com`} rel="noopener noreferrer">
         Send me email
       </a>
     </ProposalEmail_>

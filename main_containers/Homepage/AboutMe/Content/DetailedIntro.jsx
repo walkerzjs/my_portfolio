@@ -38,9 +38,9 @@ const DetailedIntro = (props) => {
   return (
     <DetailedIntro_ aria-label="My detailed introduction">
       <p>
-        I am a Software Developer skilled in SQL, Python and React. Data Analysis and data warehousing is my past experience.
+        Data Analysis and data warehousing is my past experience. I am skilled in SQL, Python, Javascript and R. In my past experience, I delivered my work diligently and achieved good results.
       </p>
-      <p>Let's work tegother for the benefit of others.</p>
+      <p>Let's work together for good!</p>
     </DetailedIntro_>
   );
 };

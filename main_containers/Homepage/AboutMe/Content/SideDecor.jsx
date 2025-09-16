@@ -9,8 +9,8 @@ const SideDecor_ = styled.div`
   /* margin-top: -2vw; */
   width: 23.5vw;
   height: 23.5vw;
-  /* background: transparent url("/aboutMeDecor.svg") 0% 0% no-repeat padding-box; */
-  background: transparent url("/portrait3.svg") 0% 0% no-repeat padding-box;
+  // background: transparent url("/aboutMeDecor.svg") 0% 0% no-repeat padding-box;
+  // background: transparent url("/portrait3.svg") 0% 0% no-repeat padding-box;
   opacity: 1;
   background-size: contain;
 

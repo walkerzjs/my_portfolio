@@ -39,7 +39,7 @@ const Proposal = (props) => {
   return (
     <Proposal_>
       <AnchorLink offset="62" href="#contact">
-        Leave me a message
+        Leave me a message (only for demo)
       </AnchorLink>
     </Proposal_>
   );

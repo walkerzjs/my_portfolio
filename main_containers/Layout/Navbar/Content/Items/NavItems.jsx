@@ -30,8 +30,8 @@ const NavItems = (props) => {
         label="About me"
       />
       <SharedNavItem
-        id="https://asadream.my-portfoliojsz.com/"
-        label="Blog"
+        id="https://github.com/walkerzjs/AsADream"
+        label="Blog repo"
         type="external"
       />
       <SharedNavItem id="projects" label="Projects" />
