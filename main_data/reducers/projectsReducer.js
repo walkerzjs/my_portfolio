@@ -30,7 +30,7 @@ const initialState = {
     title: "Portfolio website",
     desc: "My personal website.",
     githubLink: "https://github.com/walkerzjs/my-portfolioJSZ",
-    website: "https://github.com/walkerzjs/my_portfolio",
+    website: "https://www.jacob-portfolio.com/",
     Technologies: "React, Redux, Jest, AWS",
   },
   4: {
@@ -46,7 +46,7 @@ const initialState = {
     title: "AsADream",
     desc: "My personal blog",
     githubLink: "https://github.com/walkerzjs/AsADream",
-    website: "https://github.com/walkerzjs/AsADream",
+    website: "https://www.blog.jacob-portfolio.com",
     Technologies: "React, Redux, Graphql, AWS",
   },
 

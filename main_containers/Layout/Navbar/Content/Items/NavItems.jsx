@@ -30,7 +30,7 @@ const NavItems = (props) => {
         label="About me"
       />
       <SharedNavItem
-        id="https://master.d2vnrstwwja400.amplifyapp.com/"
+        id="https://www.blog.jacob-portfolio.com"
         label="Blog"
         type="external"
       />
