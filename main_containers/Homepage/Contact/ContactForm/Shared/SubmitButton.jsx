@@ -60,7 +60,7 @@ const SubmitButton = (props) => {
       // when this button is focused.
       onMouseOut={onMouseOut}
     >
-      Submit
+      Submit (display only)
     </Button_>
   );
 };

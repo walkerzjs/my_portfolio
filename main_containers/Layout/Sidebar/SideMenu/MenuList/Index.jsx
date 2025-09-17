@@ -23,8 +23,8 @@ const MenuList = (props) => {
     <MenuList_>
       <MenuItem id="aboutMe" label="About Me" />
       <MenuItem
-        id="https://github.com/walkerzjs/AsADream"
-        label="Blog repo"
+        id="https://master.d2vnrstwwja400.amplifyapp.com/"
+        label="Blog"
         type="external"
       />
       <MenuItem id="projects" label="Projects" />
