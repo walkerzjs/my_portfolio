@@ -82,6 +82,14 @@ const initialState = {
     website: "https://www.kaggle.com/code/jacobseater/world-happiness-report-case-study",
     Technologies: "Python, Seaborn, Pandas, Plotly",
   },
+  10: {
+    image: "/data_analysis_free_image_unsplash_Markus_Winkler.jpg",
+    title: "Video game sales and ratings case study",
+    desc: "Analyzing Steam video game data to understand what kind of games is more popular or has better ratings",
+    githubLink: "",
+    website: "https://www.kaggle.com/code/jacobseater/video-game-sales-and-ratings-case-study",
+    Technologies: "Python, Seaborn, Pandas",
+  },
 };
 
 const reducer = (state = initialState, action) => {
