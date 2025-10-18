@@ -12,7 +12,7 @@ const Technologies_ = styled.p`
   font-weight: bold;
   letter-spacing: 0px;
   text-align: left;
-  height: 40%;
+  height: 30%;
   color: ${textColor};
   transition: all 0.2s ease-out;
 

@@ -74,6 +74,14 @@ const initialState = {
     website: "https://www.kaggle.com/code/jacobseater/bellabeat-tracker-case-study-python",
     Technologies: "Python, Seaborn, Pandas",
   },
+  9: {
+    image: "/data_analysis_free_image_unsplash_Markus_Winkler.jpg",
+    title: "World Happiness Report data analysis",
+    desc: "Analyzing world happiness report to understand how factors affect happiness score",
+    githubLink: "",
+    website: "https://www.kaggle.com/code/jacobseater/world-happiness-report-case-study",
+    Technologies: "Python, Seaborn, Pandas, Plotly",
+  },
 };
 
 const reducer = (state = initialState, action) => {

@@ -12,7 +12,7 @@ const background = theme("mode", {
 const SharedProjectCard_ = styled.div`
   /* width: 19vw; */
   width: 100%;
-  height: 28vw;
+  height: 30vw;
   background: ${background};
   box-shadow: 0px 3px 8px #00000029;
   border-radius: 3rem;

@@ -11,7 +11,7 @@ const Description_ = styled.p`
   font-size: 1.8rem;
   letter-spacing: 0px;
   text-align: left;
-  height: 40%;
+  height: 50%;
   color: ${textColor};
   transition: all 0.2s ease-out;
 

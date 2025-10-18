@@ -86,6 +86,12 @@ export const submit = () => {
     formValues.forEach((item) => {
       formValuesObject[item.type] = item[item.type];
     });
+    // add local time and utc time
+    const now = new Date();
+    const utcTime = now.toISOString();
+    const melbourneTime = now.toLocaleString("en-AU", { timeZone: "Australia/Melbourne" });
+    formValuesObject['insert_time_UTC'] = utcTime;
+    formValuesObject['insert_time_Melbourne'] = melbourneTime;
     dispatch({ type: actionTypes.SUBMIT_START });
     axiosBase
       .post("messages.json", formValuesObject)
