@@ -1,6 +1,5 @@
 import Cors from "cors";
 import initMiddleware from "../../Shared/initMiddleWare";
-import { defineAuth, getSecret  } from '@aws-amplify/backend';
 // import { secretKey } from "../../main_containers/Shared/ReCaptcha";
 const axios = require("axios");
 // const secretKey = process.env.RECAPTCHA_SECRET_KEY;
