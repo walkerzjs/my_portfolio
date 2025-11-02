@@ -43,8 +43,8 @@ const SubmitButton = (props) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    if (isValid === true) {
-    // if (isValid === true && isRobot === false) {
+    // if (isValid === true) {
+    if (isValid === true && isRobot === false) {
       dispatch(submit());
     } else {
       dispatch(submitCheck());

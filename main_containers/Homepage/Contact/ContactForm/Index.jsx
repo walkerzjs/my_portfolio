@@ -49,7 +49,7 @@ const Index = (props) => {
       <Input key={keys[1]} id={keys[1]} />
       <TextArea key={keys[2]} id={keys[2]} />
       {/* for now disable recaptcha for further maintainance */}
-      {/* <Captcha /> */}
+      <Captcha />
       {isSubmitting === true ? submitSpinner : <SubmitButton />}
     </>
   );
