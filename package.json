@@ -13,6 +13,7 @@
     "test:watch": "npm test -- --watch"
   },
   "dependencies": {
+    "@aws-amplify/backend": "^1.17.0",
     "axios": "^1.7.7",
     "babel-plugin-styled-components": "^2.1.4",
     "chokidar": "^4.0.1",
