@@ -4,14 +4,15 @@ applications:
       phases:
         preBuild:
           commands:
-            - npm ci
+
+            - yarn install --frozen-lockfile
         build:
           commands:
             # Add this command for each private environment variable
             - echo "RECAPTCHA_SECRET_KEY=$RECAPTCHA_SECRET_KEY" >> .env.production
             # Repeat for other variables:
             # - echo "ANOTHER_VAR=$ANOTHER_VAR" >> .env.production
-            - yarn install --frozen-lockfile
+            
             - yarn run build
       artifacts:
         baseDirectory: .next
