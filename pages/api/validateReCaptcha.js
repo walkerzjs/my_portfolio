@@ -1,6 +1,6 @@
 import Cors from "cors";
 import initMiddleware from "../../Shared/initMiddleWare";
-import { defineAuth, getSecret,secret  } from '@aws-amplify/backend';
+import { defineAuth, getSecret  } from '@aws-amplify/backend';
 // import { secretKey } from "../../main_containers/Shared/ReCaptcha";
 const axios = require("axios");
 // const secretKey = process.env.RECAPTCHA_SECRET_KEY;
@@ -25,7 +25,7 @@ export default async (req, res) => {
   await cors(req, res);
   const secretKey =
    process.env.NODE_ENV === "production"
-    ? await secret('RECAPTCHA_SECRET_KEY')
+    ? await getSecret ('RECAPTCHA_SECRET_KEY')
     : process.env.RECAPTCHA_SECRET_KEY;
   
   const requestObject = {
