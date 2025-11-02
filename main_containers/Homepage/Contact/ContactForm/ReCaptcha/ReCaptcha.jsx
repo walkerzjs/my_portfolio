@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { robotCheck } from "../../../../../main_data/actions/contactFormActions";
 const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 console.log("siteKey:", siteKey);
-// console.log('Secret key:', process.env.RECAPTCHA_SECRET_KEY);
+console.log('Secret key:', process.env.RECAPTCHA_SECRET_KEY);
 const Captcha = (props) => {
   const recaptchaRef = useRef();
   const dispatch = useDispatch();
