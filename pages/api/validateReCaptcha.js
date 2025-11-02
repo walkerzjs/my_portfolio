@@ -2,15 +2,15 @@ import Cors from "cors";
 import initMiddleware from "../../Shared/initMiddleWare";
 // import { secretKey } from "../../main_containers/Shared/ReCaptcha";
 const axios = require("axios");
-
-
+const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+console.log("secretKey:", secretKey);
 const cors = initMiddleware(
   // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
   Cors({
     // Only allow requests with GET, POST and OPTIONS
     methods: ["GET", "POST", "OPTIONS"],
     origin: [
-      "https://www.jacob-portfolio.com/",
+      // "https://www.jacob-portfolio.com",
       "https://jacob-portfolio.com",
       "http://localhost:3000",
       "http://localhost",
@@ -21,8 +21,8 @@ const cors = initMiddleware(
 
 export default async (req, res) => {
   await cors(req, res);
-  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
-  console.log("secretKey:", secretKey);
+  
+  
   const requestObject = {
     secret: secretKey,
     response: req.query.token,
