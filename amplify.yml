@@ -11,7 +11,7 @@ applications:
             - echo "RECAPTCHA_SECRET_KEY=$RECAPTCHA_SECRET_KEY" >> .env.production
             # Repeat for other variables:
             # - echo "ANOTHER_VAR=$ANOTHER_VAR" >> .env.production
-            - npm run build
+            - npm run build --force
       artifacts:
         baseDirectory: .next
         files:
