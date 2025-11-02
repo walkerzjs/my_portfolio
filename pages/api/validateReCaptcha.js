@@ -22,7 +22,7 @@ const cors = initMiddleware(
 export default async (req, res) => {
   await cors(req, res);
   const secretKey = process.env.RECAPTCHA_SECRET_KEY;
-  // console.log("secretKey:", secretKey);
+  console.log("secretKey:", secretKey);
   const requestObject = {
     secret: secretKey,
     response: req.query.token,
