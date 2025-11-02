@@ -2,7 +2,7 @@ import Cors from "cors";
 import initMiddleware from "../../Shared/initMiddleWare";
 // import { secretKey } from "../../main_containers/Shared/ReCaptcha";
 const axios = require("axios");
-const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+const secretKey = process.env.NEXT_PUBLIC_RECAPTCHA_SECRET_KEY;
 console.log("secretKey:", secretKey);
 const cors = initMiddleware(
   // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
