@@ -11,6 +11,7 @@ const cors = initMiddleware(
     methods: ["GET", "POST", "OPTIONS"],
     origin: [
       "https://www.jacob-portfolio.com/",
+      "https://jacob-portfolio.com",
       "http://localhost:3000",
       "http://localhost",
       "http://localhost:1234",
