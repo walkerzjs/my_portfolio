@@ -23,11 +23,15 @@ const cors = initMiddleware(
 
 export default async (req, res) => {
   await cors(req, res);
+  console.log("Amplify secret object:", await getSecret("RECAPTCHA_SECRET_KEY"));
   const secretKey =
    process.env.NODE_ENV === "production"
-    ? await getSecret ('RECAPTCHA_SECRET_KEY')
+    ? (await getSecret('RECAPTCHA_SECRET_KEY')).value
     : process.env.RECAPTCHA_SECRET_KEY;
-  
+  if (!secretKey) {
+    console.error("❌ reCAPTCHA secret key missing!");
+    return res.status(500).json({ success: false, error: "Missing secret key" });
+  }  
   const requestObject = {
     secret: secretKey,
     response: req.query.token,
