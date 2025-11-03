@@ -1,5 +1,5 @@
 import * as actionTypes from "./actionTypes";
-import axiosBase from "../axiosBase";
+// import axiosBase from "../axiosBase";
 import axios from "axios";
 
 
@@ -71,9 +71,10 @@ export const submitCheck = () => {
     });
   };
 };
-
+import {app} from "../firebase";
+import { signInAnonymously,getAuth } from "firebase/auth"; // Import necessary auth functions
 export const submit = () => {
-  return (dispatch, getState) => {
+  return async (dispatch, getState) => {
     const config = getState().contactFormReducer.formConfig;
     const formValues = Object.keys(config).map((key) => {
       return {
@@ -93,8 +94,33 @@ export const submit = () => {
     formValuesObject['insert_time_UTC'] = utcTime;
     formValuesObject['insert_time_Melbourne'] = melbourneTime;
     dispatch({ type: actionTypes.SUBMIT_START });
-    axiosBase
-      .post("messages.json", formValuesObject)
+    // Authenticate anonymously with Firebase
+    const auth = getAuth(app);
+    // console.log("auth:", auth);
+    let user = auth.currentUser;
+    if (!user) {
+      console.log("No user signed in, attempting anonymous sign-in...");
+      try {
+        const userCredential = await signInAnonymously(auth);
+        user = userCredential.user;
+        console.log("Anonymously signed in with UID:", user.uid);
+      } catch (error) {
+        console.error("Error during anonymous sign-in:", error);
+        // Handle error, maybe show a message to the user
+        return;
+      }
+    }
+    // At this point, `user` should be an authenticated user (could be anonymous)
+    if (!user) {
+      console.error("Authentication failed. Cannot send form data.");
+      return;
+    }
+    const idToken = await user.getIdToken();
+    const dataPath = 'messages'; 
+    const databaseURL = 'https://my-portfolio-b1ad0.firebaseio.com';
+    const fullUrl = `${databaseURL}/${dataPath}.json?auth=${idToken}`;
+    axios
+      .post(fullUrl, formValuesObject)
       .then((response) => {
         dispatch({ type: actionTypes.SUBMIT_SUCCESS });
       })

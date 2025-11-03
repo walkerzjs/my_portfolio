@@ -9,14 +9,14 @@ const Index_ = styled.div``;
 const Index = (props) => {
   const isFormValid = useSelector((state) => state.contactFormReducer.isValid);
   let content = null;
-  if (isFormValid === true) {
+  // if (isFormValid === true) {
     content = (
       <Index_ aria-label="Google ReCAPTCHA">
         <ReCaptcha />
         <RobotErrorMessage />
       </Index_>
     );
-  }
+  // }
 
   return content;
 };
