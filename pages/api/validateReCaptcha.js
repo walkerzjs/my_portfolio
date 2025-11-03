@@ -11,7 +11,7 @@ const cors = initMiddleware(
     // Only allow requests with GET, POST and OPTIONS
     methods: ["GET", "POST", "OPTIONS"],
     origin: [
-      // "https://www.jacob-portfolio.com",
+      "https://www.jacob-portfolio.com",
       "https://jacob-portfolio.com",
       "http://localhost:3000",
       "http://localhost",
