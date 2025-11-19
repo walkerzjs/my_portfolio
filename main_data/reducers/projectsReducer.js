@@ -66,15 +66,8 @@ const initialState = {
     website: "https://www.kaggle.com/code/jacobseater/bellabeat-tracker-case-study",
     Technologies: "R, Rmarkdown, tidyverse",
   },
+
   8: {
-    image: "/data_analysis_free_image_unsplash_Markus_Winkler.jpg",
-    title: "Bellabeat tracker case study using Python",
-    desc: "Google data analytics certification case study 2 bellabeat with Python",
-    githubLink: "",
-    website: "https://www.kaggle.com/code/jacobseater/bellabeat-tracker-case-study-python",
-    Technologies: "Python, Seaborn, Pandas",
-  },
-  9: {
     image: "/data_analysis_free_image_unsplash_Markus_Winkler.jpg",
     title: "World Happiness Report data analysis",
     desc: "Analyzing world happiness report to understand how factors affect happiness score",
@@ -82,12 +75,20 @@ const initialState = {
     website: "https://www.kaggle.com/code/jacobseater/world-happiness-report-case-study",
     Technologies: "Python, Seaborn, Pandas, Plotly",
   },
-  10: {
+  9: {
     image: "/data_analysis_free_image_unsplash_Markus_Winkler.jpg",
     title: "Video game sales and ratings case study",
     desc: "Analyzing Steam video game data to understand what kind of games is more popular or has better ratings",
     githubLink: "",
     website: "https://www.kaggle.com/code/jacobseater/video-game-sales-and-ratings-case-study",
+    Technologies: "Python, Seaborn, Pandas",
+  },
+  10: {
+    image: "/data_analysis_free_image_unsplash_Markus_Winkler.jpg",
+    title: "Bellabeat tracker case study using Python",
+    desc: "Google data analytics certification case study 2 bellabeat with Python",
+    githubLink: "",
+    website: "https://www.kaggle.com/code/jacobseater/bellabeat-tracker-case-study-python",
     Technologies: "Python, Seaborn, Pandas",
   },
 };
